@@ -1,0 +1,150 @@
+<div *ngIf="hotProducts.length != 0" fxLayout="column">
+  <!--  <h3 style="margin: 10px;">Sponsored <span> | </span> <a href="/advertise" > Get featured here</a></h3>-->
+  <!--  <div fxLayoutAlign="center center" >-->
+  <!--    <ng-adsense [adClient]="'ca-pub-8436153445734776'" [height]="300"-->
+  <!--                [adSlot]="5300898723">-->
+
+  <!--    </ng-adsense>-->
+
+  <!--&lt;!&ndash;    <button mat-button color="warn"  style="margin: 10px" fxFlex>Enlist your business</button>&ndash;&gt;-->
+  <!--  </div>-->
+  <h3 style="margin: 10px" *ngIf="hotProducts.length > 0">Hot Now</h3>
+  <div style="height: auto">
+    <mat-carousel
+      [loop]="true"
+      [hideArrows]="true"
+      [hideIndicators]="true"
+      [proportion]="25"
+      [interval]="8000"
+      slideHeight="250px"
+      [maintainAspectRatio]="false"
+      maxWidth="auto"
+    >
+      <mat-carousel-slide [hideOverlay]="true" *ngFor="let item of hotProducts">
+        <mat-card
+          class="panel"
+          style="
+            /*margin: 10px;*/
+            padding: 0;
+            border-radius: 5px;
+            box-shadow: none;
+            background-color: transparent;
+          "
+          fxLayoutAlign="center center"
+        >
+          <div
+            style="margin-top: -2px"
+            mat-card-image
+            fxLayoutAlign="center center"
+            fxShow
+            fxHide.xs="true"
+          >
+            <img
+              width="200"
+              height="250"
+              data-src="{{ item.image_urls[0] }}"
+              onerror="this.src='assets/placeholder.png'"
+              alt="{{ item.product_name }}"
+              style="height: 250px; width: 200px; object-fit: cover"
+            />
+          </div>
+          <div
+            style="margin-top: -2px"
+            *ngIf="!checkImageError(item.image_urls[0])"
+            mat-card-image
+            fxLayoutAlign="center center"
+            fxHide
+            fxHide.xs="false"
+          >
+            <img
+              width="150"
+              height="200"
+              data-src="{{ item.image_urls[0] }}"
+              onerror="this.src='assets/placeholder.png'"
+              alt="{{ item.product_name }}"
+              style="height: 200px; width: 150px; object-fit: cover"
+            />
+          </div>
+        </mat-card>
+      </mat-carousel-slide>
+    </mat-carousel>
+  </div>
+  <mat-divider style="margin-bottom: 10px; margin-top: 10px"></mat-divider>
+  <h3 style="margin: 10px" *ngIf="trendingProduct.length > 0">Trending Now</h3>
+  <div>
+    <div *ngFor="let item of trendingProduct">
+      <mat-card
+        class="panel"
+        style="
+          margin-left: 10px;
+          padding: 0;
+          border-radius: 5px;
+          box-shadow: none;
+          background-color: transparent;
+        "
+      >
+        <div fxLayout="row">
+          <img
+            md-card-image
+            alt="{{ item.product_name }}"
+            loading="lazy"
+            style="
+              object-fit: contain;
+              width: 45px;
+              height: 45px;
+              border-radius: 5px;
+              border-color: #e75757;
+              border-width: 1px;
+              background-color: #ffffff;
+              max-width: 100%;
+            "
+            src="{{ item.image_urls[0] }}"
+          />
+          <!--          <span fxFlex="10"></span>-->
+          <mat-card-content fxFlex="65" style="font-size: small" fxFlex>
+            <a class="brand" href="{{ item.payment_url }}"></a>
+            <!--            <span *ngFor="let i of item.product_name.replace(item.brand_name,'')">-->
+            <!--            <a target="_blank" rel="noopener" href="{{ item.payment_url }}">{{ i }} </a>-->
+            <!--            </span>-->
+
+            <a target="_blank" rel="noopener" href="{{ item.payment_url }}">
+              <span>
+                {{
+                  item.product_name.replace(item.brand_name, "").split(",")[0]
+                }}</span
+              >
+            </a>
+            <p>
+              {{ item.price | currency : item.currency }}
+              <span
+                *ngIf="item.price_old != null"
+                class="discount"
+                style="color: rgba(10, 10, 10, 0.39)"
+              >
+                ({{
+                  ((item.price_old - item.price) * 100.0) / item.price_old
+                    | number
+                }}%)</span
+              >
+              | <span>{{ item.brand_name }}</span>
+            </p>
+          </mat-card-content>
+        </div>
+        <!-- <img
+          flicking-panel
+          fxFill
+          fxFlex
+          loading="lazy"
+          style="
+            object-fit: cover;
+            width: 200px;
+            height: 250px;
+            background-color: #ffffff;
+            max-width: 100%;
+          "
+          src="{{ i.image_urls[0] }}"
+        /> -->
+      </mat-card>
+    </div>
+  </div>
+</div>

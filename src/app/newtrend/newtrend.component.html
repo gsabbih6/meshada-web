@@ -1,0 +1,23 @@
+<h1 *ngIf="discover.length==0">Discover new & trendy</h1>
+<drag-scroll  class="scrolling-wrapper" style="overflow: hidden" >
+    <div drag-scroll-item class="card" *ngFor="let dis of discover">
+      <img src='{{dis.thumbnail}}'>
+      <h2>{{dis.short_desc}}</h2>
+    </div>
+    <div drag-scroll-item class="card">
+      <img src='https://bl.aopcdn.com/goods/SP220108O53D/f44c8189fe4a430ead9b7a4a88031d41.jpg@!h400-w300'>
+      <h2>Sample description</h2>
+    </div>
+    <div drag-scroll-item class="card">
+      <img src='https://bl.aopcdn.com/goods/SP220108O53D/f44c8189fe4a430ead9b7a4a88031d41.jpg@!h400-w300'>
+      <h2>Sample description</h2>
+    </div>
+    <div drag-scroll-item class="card">
+      <img src='https://bl.aopcdn.com/goods/SP220108O53D/f44c8189fe4a430ead9b7a4a88031d41.jpg@!h400-w300'>
+      <h2>Sample description</h2>
+    </div>
+    <div drag-scroll-item class="card">
+      <img src='https://bl.aopcdn.com/goods/SP220108O53D/f44c8189fe4a430ead9b7a4a88031d41.jpg@!h400-w300'>
+      <h2>Sample description</h2>
+    </div>
+</drag-scroll>

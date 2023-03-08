@@ -1,0 +1,169 @@
+<div fxLayout="row">
+  <div fxShow fxHide.xs fxFlex="20%"></div>
+  <div
+    style="overflow: auto; overflow-x: hidden; height: 100%; margin: 10px"
+    fxLayout="column"
+  >
+    <h1>
+      <span style="font-size: x-large">Saved Items</span>
+    </h1>
+    <div
+      fxLayout="column"
+      fxLayoutAlign="center center"
+      *ngIf="product.length == 0"
+      style="border-radius: 10px; background-color: indianred"
+    >
+      <p
+        fxFlex
+        style="
+          font-size: medium;
+          color: white;
+          font-size: large;
+          text-align: center;
+        "
+      >
+        You don't have any saved items in your wishlist.
+      </p>
+    </div>
+    <p style="font-size: medium">
+      Create and manage your wishlist from across multiple stores in one place.
+      We'll send you an alert when your favorite products go on sale, come back
+      in stock or has a price reduction.
+    </p>
+    <div fxFlex *ngIf="product.length == 0" fxLayoutAlign="center center">
+      <button
+        routerLink="/store"
+        routerLinkActive="active"
+        mat-stroked-button
+        style="
+          border-color: indianred !important;
+          font-family: 'Roboto Mono', monospace;
+        "
+        mat-raised-button
+      >
+        Find something you may like
+      </button>
+    </div>
+    <div fxLayout="row wrap" fxLayoutGap="1px grid" fxFlex #maindiv>
+      <div
+        *ngFor="let item of product; let i = index"
+        [fxFlex]="100 / 4 + '%'"
+        [fxFlex.xs]="50 + '%'"
+        [fxFlex.md]="33 + '%'"
+      >
+        <mat-card
+          #card1
+          fxLayout="column"
+          fxFlex
+          style="border-radius: 0px !important"
+        >
+          <div
+            fxLayout="row"
+            style="z-index: 3; position: absolute; margin: -10px"
+          >
+            <button
+              fxFlex
+              (click)="removeItemforList(i)"
+              style="
+                cursor: pointer;
+                background-color: rgb(255, 255, 255);
+                border-width: 3px !important;
+                border-color: rgba(220, 20, 60, 0) !important;
+                border-radius: 50px;
+              "
+              color="warn"
+              mat-stroked--button
+            >
+              <mat-icon>close_outlined</mat-icon>
+            </button>
+          </div>
+          <div
+            style="margin-top: -2px"
+            mat-card-image
+            fxLayoutAlign="center center"
+            fxShow
+            fxHide.xs="true"
+          >
+            <img
+              width="200"
+              height="250"
+              data-src="{{ item.image_urls[0] }}"
+              onerror="this.src='assets/placeholder.png'"
+              alt="{{ item.product_name }}"
+              style="height: 250px; width: 200px; object-fit: cover"
+            />
+          </div>
+          <div
+            style="margin-top: -2px"
+            mat-card-image
+            fxLayoutAlign="center center"
+            fxHide
+            fxHide.xs="false"
+          >
+            <img
+              width="150"
+              height="200"
+              data-src="{{ item.image_urls[0] }}"
+              onerror="this.src='assets/placeholder.png'"
+              alt="{{ item.product_name }}"
+              style="height: 200px; width: 150px; object-fit: cover"
+            />
+          </div>
+          <mat-card-content fxLayout="column" fxFlex="30%">
+            <!--          <span *ngFor="let i of item.product_name.split(' ')"-->
+            <!--                style="margin-bottom: 0px;background-color: #a8bbbf"-->
+            <!--          >-->
+
+            <a
+              target="_blank"
+              [routerLink]="['/action', item.id + '&' + user.id]"
+              routerLinkActive="active"
+              rel="noopener"
+            >
+              <span style="cursor: pointer" fxFlex>
+                {{ item.product_name.replace(item.brand_name, "") }}
+              </span>
+            </a>
+            <!--          </span>-->
+            <p fxFlex="10%" style="margin-top: 3px; font-weight: 600">
+              {{ item.price | currency : item.currency }}
+
+              <span
+                *ngIf="item.price_old != null"
+                style="text-decoration: line-through; color: orangered"
+                >{{ item.price_old | currency : item.currency }}</span
+              >
+              <span
+                *ngIf="item.price_old != null"
+                class="discount"
+                style="color: rgba(222, 154, 18, 0.69)"
+              >
+                ({{
+                  ((item.price_old - item.price) * 100.0) / item.price_old
+                    | number
+                }}%) {{ item.cashback }} 10% CB
+              </span>
+              <span
+                *ngIf="item.cashback != null"
+                class="discount"
+                style="color: rgba(222, 25, 18, 0.69); font-size: x-small"
+              >
+                <!--              ({{-->
+                <!--                ((item.price[item.price.length - 2] - -->
+                <!--                  item.price[item.price.length - 1]) *-->
+                <!--                  100.0) /-->
+                <!--                  item.price[item.price.length - 2] | number-->
+                <!--              }}%)-->
+                {{ item.cashback }} CASHBACK
+              </span>
+            </p>
+            <p fxFlex="10%" style="margin-top: 3px">
+              {{ item.program_name | uppercase }}
+            </p>
+          </mat-card-content>
+        </mat-card>
+      </div>
+    </div>
+  </div>
+  <div fxShow fxHide.xs fxFlex="20%"></div>
+</div>

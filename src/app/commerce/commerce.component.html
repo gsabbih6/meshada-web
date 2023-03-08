@@ -1,0 +1,64 @@
+<!-- <div fxLayout="column"> -->
+<!--  <mat-drawer-container class="example-container" autosize   >-->
+
+<!--  <mat-drawer #drawer class="example-sidenav" mode="side" opened="{{opennav}}" fxFlex="20%">-->
+
+<!--    <app-side-navigation-->
+<!--      class="left"-->
+<!--      style="-->
+<!--      overflow: scroll;-->
+<!--      height: 50%;-->
+<!--      height: auto;-->
+<!--      overflow-x: hidden;-->
+<!--      -webkit-overflow-scrolling: touch;-->
+<!--      -ms-overflow-style: none;-->
+<!--      margin-left: 20px;-->
+<!--    "-->
+<!--    ></app-side-navigation>-->
+<!--  </mat-drawer>-->
+<div class="container">
+  <!-- <div fxLayout="row" style="overflow-x: hidden; height: auto"> -->
+  <!-- <div [fxHide.xs]="true" class="right" fxFlex="10%"></div> -->
+  <!-- <div fxFlex="20%" style="margin: 10px"> -->
+  <!-- <div class="container_inner"> -->
+  <div class="filter">
+    <app-side-navigation
+      [brands]="product.brands"
+      [category]="category"
+      [store]="product.stores"
+    ></app-side-navigation>
+  </div>
+
+  <div class="content">
+    <app-imagegallery (pevent)="handleNext($event)"></app-imagegallery>
+  </div>
+
+  <!-- <div fxHide.xs class="right" fxFlex="10%"></div> -->
+  <!-- <div
+      [fxHide.xs]="true"
+      class="right"
+      fxFlex="20%"
+      style="
+        height: 100vh;
+        float: left;
+        overflow: scroll;
+        /*height: auto;*/
+        -webkit-overflow-scrolling: touch;
+        -ms-overflow-style: none;
+      "
+    >
+      <app-collection
+        style="
+          height: 100%;
+          overflow: auto;
+          overflow-x: hidden;
+          height: auto;
+          -webkit-overflow-scrolling: touch;
+          -ms-overflow-style: none;
+        "
+      ></app-collection>
+    </div> -->
+  <!-- </div> -->
+  <!-- </div> -->
+  <!-- </div> -->
+</div>

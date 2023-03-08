@@ -1,0 +1,20 @@
+/* .input,
+.mat-form-field-outline-end {
+  border-radius: 0 !important;
+}
+.header-search-field {
+  background-color: aquamarine;
+  border-radius: 20px;
+  height: 30px;
+} */
+/* input {
+  border-radius: 30px;
+  border-width: 1px;
+}
+.mat-form-field.mat-form-field {
+  font-size: 60px;
+} */
+
+.mat-button-toggle-checked{
+  background-color: rgba(231, 87, 87, 0.2);
+}

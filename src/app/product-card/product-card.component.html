@@ -1,0 +1,130 @@
+<mat-card
+  #card1
+  style="
+    height: 100%;
+    width: 250px;
+    border-radius: 0px !important;
+    margin-left: 2px;
+    margin-bottom: 4px;
+    flex: 1;
+    margin-right: 2px;
+    margin-top: 0;
+    padding: 10px;
+  "
+>
+  <div mat-card-image style="width: 100%">
+    <img
+      class="image_card"
+      width="200"
+      height="250"
+      data-src="{{
+        'http://localhost:5050/sig/resize:fill:200:250/sharpen:0.5/quality:95/' +
+          product.image_urls.raw[0] +
+          '.webp'
+      }}"
+      onerror="this.src='assets/placeholder.png'"
+      alt="{{ product.product_name.raw }}"
+    />
+  </div>
+  <!-- <div style="margin-top: -2px" mat-card-image>
+    <img
+      width="150"
+      height="200"
+      data-src="{{
+        'http://localhost:5050/sig/resize:fit:150:200/sharpen:0.5/quality:95/' +
+          product.image_urls.raw[0] +
+          '.webp'
+      }}"
+      onerror="this.src='assets/placeholder.png'"
+      alt="{{ product.product_name.raw }}"
+      style="height: 200px; width: 150px; object-fit: cover"
+    />
+  </div> -->
+  <mat-card-content>
+    <!--          <span *ngFor="let i of product.product_name.split(' ')"-->
+    <!--                style="margin-bottom: 0px;background-color: #a8bbbf"-->
+    <!--          >-->
+
+    <p style="margin-top: 3px">
+      {{ product.program_name.raw | uppercase }}
+    </p>
+
+    <a
+      target="_blank"
+      style="cursor: pointer; text-decoration: none; color: rgb(29, 29, 29)"
+      (click)="onProductClicked(product)"
+      [routerLink]="['/action', product.id.raw + '&' + user.id]"
+      routerLinkActive="active"
+      rel="noopener"
+    >
+      <span>
+        {{ product.product_name.raw }}
+      </span>
+    </a>
+    <div class="item_des">
+      <!--          </span>-->
+      <p style="margin-top: 3px; font-weight: 600">
+        {{ product.price.raw | currency : product.currency.raw }}
+
+        <span
+          *ngIf="product.price.raw < product.price_old.raw"
+          style="text-decoration: line-through; color: orangered"
+          >{{ product.price_old.raw | currency : product.currency.raw }}</span
+        >
+        <span
+          *ngIf="product.price.raw < product.price_old.raw"
+          class="discount"
+          style="color: rgba(222, 154, 18, 0.69)"
+        >
+          ({{
+            ((product.price_old.raw - product.price.raw) * 100.0) /
+              product.price_old.raw | number
+          }}%)
+        </span>
+        <!-- <span>{{ product.cashback.raw | number : "2.1-2" }}</span> -->
+        <span
+          *ngIf="product.cashback.raw"
+          class="discount"
+          style="color: rgba(222, 25, 18, 0.69); font-size: x-small"
+        >
+          <!--              ({{-->
+          <!--                ((product.price[product.price.length - 2] - -->
+          <!--                  product.price[product.price.length - 1]) *-->
+          <!--                  100.0) /-->
+          <!--                  product.price[product.price.length - 2] | number-->
+          <!--              }}%)-->
+          {{ product.cashback.raw | number | currency : product.currency.raw }}
+          cashback
+        </span>
+      </p>
+    </div>
+  </mat-card-content>
+  <mat-card-actions fxLayout="row">
+    <div>
+      <button
+        *ngIf="!product.available.raw"
+        style="border-width: 0px; border-radius: 20px; padding: 10px"
+      >
+        SOLD OUT
+      </button>
+    </div>
+    <div>
+      <button
+        mat-icon-button
+        color="warn"
+        (click)="onWishListClicked()"
+        aria-label="Example icon button with a heart icon"
+      >
+        <mat-icon>{{ wishlistIcon }}</mat-icon>
+      </button>
+      <button
+        (click)="onAddtoWardrobeClicked(i)"
+        mat-icon-button
+        color="warn"
+        aria-label="Example icon button with a heart icon"
+      >
+        <mat-icon>{{ wardrobelistIcon }}</mat-icon>
+      </button>
+    </div>
+  </mat-card-actions>
+</mat-card>

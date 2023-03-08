@@ -1,0 +1,35 @@
+<div
+  *ngIf="querystring != ''"
+  fxLayoutAlign="center center"
+  style="background-color: rgba(211, 211, 211, 0.466)"
+>
+  <p *ngIf="!showsorry" style="font-size: xx-large; text-transform: uppercase">
+    {{ resultstat }} "{{ querystring }}"
+  </p>
+  <div
+    *ngIf="showsorry"
+    class="PxTSj"
+    fxLayoutAlign="center center"
+    fxLayout="column"
+  >
+    <h2><span class="_3bUjZ r6q0H">Sorry</span></h2>
+    <p>
+      We couldn't find product matching your query
+      <strong>"{{ querystring }}"</strong>. Try searching for a related product
+      or
+      <a
+        is="tracked-link"
+        class="blue-text black-hover no-underline"
+        event-category="navigation"
+        event-action="oos_search_click"
+        event-label="emty_results_page"
+        href="/search/?q=qwert&amp;term=qwert&amp;meta_stock_status=1&amp;meta_stock_status=2&amp;reason=search_oos_link"
+        data-component-id="1"
+        ><em> check our out of stock itemss</em></a
+      >
+    </p>
+    <p>
+      You might want to double check for typos or try a different search term
+    </p>
+  </div>
+</div>

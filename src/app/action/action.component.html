@@ -1,0 +1,33 @@
+<div fxLayout="column" fxLayoutAlign="center center" style="margin-top: 15px">
+  <div fxShow fxHide.xs fxFlex="20%"></div>
+  <div>
+    <img
+      fxHide.xs
+      fxShow
+      style="display: inline-block; margin-left: 1rem"
+      src="../../assets/logo.svg"
+    />
+    <img
+      fxHide
+      fxShow.xs
+      style="display: block; width: 250px"
+      alt="meshada"
+      src="../../assets/logo.svg"
+    />
+  </div>
+  <h1 style="font-size: xx-large; text-align: center">We are taking you to</h1>
+
+  <img class="circular_image" src="{{ product.program_icon_url.raw }}" />
+
+  <h1 style="text-align: center">{{ product.store_name.raw }}</h1>
+  <mat-spinner color="warn"></mat-spinner>
+  <div>
+    <h1>
+      Taking too long?
+      <span style="color: #e75757">
+        <a href="{{ product.payment_url.raw }}"> Click here</a></span
+      >
+    </h1>
+  </div>
+  <div fxShow fxHide.xs fxFlex="20%"></div>
+</div>

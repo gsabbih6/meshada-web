@@ -1,0 +1,20 @@
+<div class="content">
+  <!-- <div fxLayout="row " fxLayoutGap="10px"> -->
+  <div fxFlex fxLayout="row " style="overflow-x: auto" fxLayoutGap="5px">
+    <!-- <mat-card fxFlex *ngFor="let tile of tiles"> -->
+    <a fxFlex *ngFor="let tile of tiles"
+      ><img
+        class="nav mat-elevation-z3"
+        style="
+          border-radius: 10px 10px 10px 10px;
+          width: 100px;
+          height: 180px;
+          object-fit: cover;
+        "
+        src="https://material.angular.io/assets/img/examples/shiba2.jpg"
+        alt="hi there"
+    /></a>
+    <!-- </mat-card> -->
+  </div>
+</div>
+<!-- </div> -->

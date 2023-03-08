@@ -1,0 +1,18 @@
+.home_container {
+  /* max-width: 1200px; */
+  margin: 0;
+  display: grid;
+  grid-template-rows: auto 2fr 0.25fr;
+}
+
+.header {
+  grid-row: 1;
+  margin-bottom: 1px;
+}
+
+.content {
+  /* grid-row: 2; */
+  overflow: auto;
+}
+
+.footer {}

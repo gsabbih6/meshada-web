@@ -1,0 +1,44 @@
+<div fxLayout="column" style="overflow: hidden;">
+  <!--  <div fxLayout="row"  >-->
+  <!--    <button color="warn" mat-dialog-close mat-icon-button>-->
+  <!--      <mat-icon>close</mat-icon>-->
+  <!--    </button>-->
+  <!--  </div>-->
+
+  <h1 Show fxHide.xs="true" fxLayoutAlign="center center" mat-dialog-title><span style="display:inline-block">Signing in to </span>
+    <img
+      style="display:inline-block;width: 120px;margin-left: 1rem"
+      src="../../assets/logo.svg"/> <span>  </span> <span style="display:inline-block"> ?</span>
+  </h1>
+
+  <h1 fxHide fxHide.xs="false" fxLayoutAlign="center center" mat-dialog-title><span style="display:inline-block">Sign in to </span>
+    <img
+      style="display:inline-block;width: 85px;margin-left: 1rem"
+      src="../../assets/logo.svg"/>
+  </h1>
+
+  <button fxFlex mat-dialog-close class="googlebutton" mat-stroked-button (click)="signInWithGoogle()">
+    <mat-icon svgIcon="google"></mat-icon>
+    Continue with Google
+  </button>
+  <button fxFlex class="googlebutton" mat-stroked-button style="background-color: cornflowerblue !important;"
+          (click)="signInWithFace()">
+    <mat-icon svgIcon="facebook"></mat-icon>
+    <span style="color: white">Continue with Facebook</span>
+  </button>
+  <div style="margin-left: 0px" mat-dialog-content>
+    By creating an account, you are agreeing to Meshada' <a [routerLink]="['/legal','terms']" routerLinkActive="active"
+                                                            mat-dialog-close>Terms
+    & Conditions</a> and
+    you agree to receive email updates from
+    Meshada. Visit our <a [routerLink]="['/legal','privacy']" routerLinkActive="active" mat-dialog-close>Privacy
+    Policy</a> to learn more
+    about how Meshada uses and
+    protects
+    your personal data.
+  </div>
+  <!--  <div style="margin-left: 0px" fxHide fxHide.xs="false" mat-dialog-content>-->
+  <!--    <span>You agree to Meshada's <a href="/legal/termsandcondition">Terms & Conditions</a> and to receive email updates from-->
+  <!--      Meshada. See our <a href="/legal/privacypolicy">Privacy Policy</a> to learn more</span>-->
+  <!--  </div>-->
+</div>

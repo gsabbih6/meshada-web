@@ -1,0 +1,1801 @@
+<div #target style="background-color: cornflowerblue" id="target"></div>
+<div fxLayout="column" style="overflow-x: hidden" >
+  <div >
+    <div  fxLayout="row">
+      <div fxShow
+           fxHide.xs="true" fxFlex="30%"></div>
+      <mat-toolbar-row fxLayoutAlign="center" fxLayout="column">
+        <mat-button-toggle-group
+          style="border-radius: 20px;
+        margin: 5px;border-color: rgba(205,92,92,0.46)"
+          appearance="standard" name="fontStyle" aria-label="Font Style">
+
+          <mat-button-toggle (click)="onOptionClicked('terms',target)" [matRippleCentered]="true" matRipple
+                             matRippleColor="rgba(231, 87, 87, 0.2)"
+                             fxFlex value="underline" style="border-right: solid 1px rgba(205,92,92,0.46);"
+          >
+           Terms & conditions
+          </mat-button-toggle>
+          <mat-button-toggle (click)="onOptionClicked('privacy',target)" [matRippleCentered]="true" matRipple
+                             matRippleColor="rgba(231, 87, 87, 0.2)"
+                             fxFlex value="underline" style="border-left: solid 1px rgba(205,92,92,0.46)"
+          >
+            Privacy policy
+          </mat-button-toggle>
+          <mat-button-toggle (click)="onOptionClicked('cashback',target)" [matRippleCentered]="true" matRipple
+                             matRippleColor="rgba(231, 87, 87, 0.2)"
+                             fxFlex value="underline" style="border-left: solid 1px rgba(205,92,92,0.46)"
+          >
+            Cashback policy
+          </mat-button-toggle>
+          <mat-button-toggle (click)="onOptionClicked('cookie',target)" [matRippleCentered]="true" matRipple
+                             matRippleColor="rgba(231, 87, 87, 0.2)"
+                             fxFlex value="underline" style="border-left: solid 1px rgba(205,92,92,0.46)"
+          >
+            Cookie policy
+          </mat-button-toggle>
+          <!--      <mat-button-toggle (click)="onOptionClicked('sizing')" [matRippleCentered]="true" matRipple-->
+          <!--                         matRippleColor="rgba(231, 87, 87, 0.2)"-->
+          <!--                         fxFlex value="underline" style="border-left: solid 1px rgba(205,92,92,0.46)"-->
+          <!--      >-->
+          <!--        Sizing guide-->
+          <!--      </mat-button-toggle>-->
+          <!--      <mat-button-toggle (click)="onOptionClicked('faq')" [matRippleCentered]="true" matRipple-->
+          <!--                         matRippleColor="rgba(231, 87, 87, 0.2)"-->
+          <!--                         fxFlex value="underline" style="border-left: solid 1px rgba(205,92,92,0.46)"-->
+          <!--      >-->
+          <!--        FAQs-->
+          <!--      </mat-button-toggle>-->
+        </mat-button-toggle-group>
+
+      </mat-toolbar-row>
+      <div fxFlex="30%"></div>
+    </div>
+    <div fxLayout="row">
+      <div fxFlex="20%"></div>
+      <div fxLayout="column">
+
+
+        <div *ngIf="terms" class="terms">
+          <h2>Terms &amp; conditions</h2>
+          <p>Welcome to Meshada. Meshada is brought to you by Meshada LTD (referred to in these Terms as "we", "us",
+            "our",
+            and
+            "Meshada")</p>.
+          <!--      We are a company incorporated in England and Wales, with company number 07132083 and with a-->
+          <!--        registered-->
+          <!--        office at The Minster Building 7th Floor, 21 Mincing Lane, London EC3R 7AG.</p>-->
+          <p>These Terms &amp; Conditions ("Terms") together with our Privacy and Cookie Policies govern your access to
+            and use of
+            Meshada's services ("Services"), and any other linked pages or blogs, features, content (including any
+            information, text,
+            graphics,
+            photos, lists of items compiled by you, comments, reviews, links, or other materials uploaded, downloaded or
+            appearing on, or linked to the Services), or applications offered from time to time by Meshada in connection
+            therewith (collectively referred to as "Content"). Your access to and use of the Services is conditioned on
+            your
+            acceptance of and compliance with these Terms. By accessing or using the Services you agree to be bound by
+            these
+            Terms.</p>
+          <h4>1. Basic Terms</h4>
+          <p>You are solely responsible for your use of the Services, for any content you post to the Services, and for
+            any
+            consequences thereof. The Content you submit, post, or display on the Services (including product reviews,
+            the
+            items you select as part of "Wardrobe") will be able to be viewed by other users of the Services and
+            through
+            third party services and websites. You can go to your account "Settings" page to disable your account, in
+            which
+            case no one will be able to view your Content and you will be logged out. You should only provide Content
+            that
+            you are comfortable sharing with others under these Terms.</p>
+          <p>You may use the Services only if you are at least 13 years of age. We do not knowingly market or sell
+            products
+            for purchase by children. You may only buy items from Meshada if you are legally capable of forming a
+            binding
+            contract with Meshada (or if you are under 18 years old, but over 13 years old, with the consent and
+            involvement
+            of a parent or guardian) and are able to abide by and comply with these Terms, and are not a person barred
+            from
+            receiving the Services under the laws of the United States, United Kingdom or any other applicable
+            jurisdiction.
+            You may use the Services only in compliance with these Terms and all applicable local, state, national, and
+            international laws, rules and regulations. If you open an account on behalf of a company, organisation, or
+            other
+            entity, then: "you" includes you and that entity; and you represent and warrant that you are authorised on
+            behalf of that entity to bind the entity to these Terms; and you agree to these Terms on the entity's
+            behalf.</p>
+          <p>The Services that Meshada provides are always evolving and the form and nature of the Services that Meshada
+            provides may change from time to time without prior notice to you. In addition, Meshada may stop
+            (permanently
+            or
+            temporarily) providing the Services (or any features within the Services) to you or to users generally and
+            may
+            not be able to provide you with prior notice. Meshada retains the right to create limits on use and storage
+            at
+            its sole discretion at any time without prior notice or any liability to you.</p>
+          <p>The Services may include advertisements, which may be targeted to the Content or information on the
+            Services,
+            queries made through the Services, or other information. The types and extent of advertising by Meshada on
+            the
+            Services are subject to change. In consideration for Meshada granting you access to and use of the Services,
+            you
+            agree that Meshada and its third party providers and partners may place such advertising on the Services or
+            in
+            connection with the display of Content or information from the Services whether submitted by you or
+            others.</p>
+          <h4>2. Account Registration</h4>
+          <p>In order to register, you are required to provide your username, email address and password or use our
+            third
+            party login comapnies. You are also able to add a profile picture and bio, and add user preferences.</p>
+          <p>All personal details disclosed by you on the Services will be collected and processed in accordance with
+            our
+            <a
+              (click)="onOptionClicked('privacy',target)">Privacy Policy</a> and <a (click)="onOptionClicked('cookie',target)">Cookie
+              Policy.</a> You
+            warrant that all the information you provide to us is accurate and complete.</p>
+          <p>You agree to register with Meshada and access and use your account solely for personal use. You may not
+            authorise
+            others to use your account.</p>
+          <p>You are solely responsible for keeping your registration and other personal details (including your
+            username
+            and password) for your account confidential.</p>
+          <p>You shall promptly notify Meshada of any actual or suspected unauthorised third party access to your
+            account.
+            You
+            shall co-operate with, and assist, us in any action or proceedings by us to prevent or otherwise deal with
+            any
+            unauthorised receipt, access or use of your account by any third party.</p>
+          <p>You warrant that all registration information and personal details provided to Meshada is true and
+            accurate.</p>
+          <h4>3. Facebook Connect</h4>
+          <p>You can also register using Facebook Connect, which allows you to register with Meshada via your Facebook
+            account.
+            If you decide to do this, you give us permission to access basic information from your Facebook account.
+            This
+            information is collected by Facebook and is provided to us under the terms of Facebook’s privacy policy. We
+            have
+            no control over individual account privacy settings on such services or policies on how your personal
+            information will be used. You and Facebook are in control of these matters, not us. Before using these
+            features,
+            you are encouraged to read all policies and information on Facebook to learn more about how they handle your
+            information. Meshada is not responsible for any acts or omissions by Facebook and any connected social media
+            service providers' use of features that come from Facebook's platform.</p>
+          <h4>4. Finding and Buying Out of Stock Items</h4>
+          <p>If an item is out of stock, you may ask us to locate the item on your behalf via the form provided on the
+            relevant product page. We will let you know by email if we are able to locate the item for you. We will then
+            send you a tailored checkout page where you will be able to place the order for the item(s) with the
+            retailer,
+            via Meshada. For orders placed via the tailored checkout page, the terms and conditions above relating to <a
+              href="#integrated-checkout-terms">Buying on Meshada via the Integrated Checkout</a> will apply, as well as
+            the
+            relevant retailer's terms and conditions. It is your responsibility to ensure that you review the relevant
+            retailer's terms and conditions before placing the order.</p>
+          <h4>5. Buying Products Through Meshada</h4>
+          <p>Meshada is an online intermediary which partners with some of the world's best known brands to give you a
+            wide
+            array of fashion items to buy.</p>
+          <p><strong>a)</strong> Buying on a Meshada Partner website</p>
+          <p>When you select a particular product that you wish to buy, you will be taken directly to the third
+            party Meshada merchant (the "Meshada Partner") website and asked to provide further personal details, which
+            are
+            likely
+            to include your billing and delivery address, and payment card details. You are being taken here because
+            that
+            Meshada Partner is not part of our Integrated Checkout service (see below for more details). The personal
+            details
+            you enter on these Meshada Partner websites will be collected, stored and processed in accordance with the
+            terms
+            and conditions and privacy policy of these websites. You must read and accept the terms and conditions and
+            privacy and cookie policies of the Meshada Partner website before purchasing your items from them. Meshada
+            is
+            not
+            responsible for the terms and conditions, privacy policies of and/or practices on other sites. The Meshada
+            Partners
+            are solely responsible for any and all issues related to products and services offered on their websites,
+            including but not limited to issues arising from the processing of your transactions on the Meshada Partner
+            websites. We are only responsible for personal information collected on the Services. Please see our <a
+              href="/help/privacy-policy/">Privacy Policy</a> and <a href="/help/cookie-policy/">Cookie Policy</a> for
+            further information.</p>
+          <p>Please note that Meshada has no responsibility for the fulfilment of your order. You should contact the
+            Meshada Partner from whom you have bought the item directly
+            in
+            respect of any queries you have on the delivery, refund, exchange or return of the items you purchase.</p>
+          <h4>6. Payments</h4>
+          <h5>Meshada Partner Websites</h5>
+          <p>If you are making a payment on one of our Meshada Partner websites, payment can be made by any card
+            accepted
+            by
+            the Meshada Partner that delivers the product. You will be asked to enter your shipping details, billing
+            details
+            and payment details in order to purchase the product from the Meshada Partner.</p>
+          <h4>7. Taxes And Duties</h4>
+          <p>Orders may be subject to additional taxes, duties and charges. Please be aware that the price of a Product
+            may
+            change at checkout if it is subject to any taxes, duties, fees, levies or delivery charges applied in the
+            country you have selected for the delivery of your order. </p>
+          <h4>8. Accessing The Services</h4>
+          <p>Access to the Services is permitted on a temporary basis, and we reserve the right to withdraw or amend the
+            Services without notice. We will not be liable if for any reason the Services are unavailable at any time or
+            for
+            any period. We reserve the right to modify, restrict access or terminate access to the Services at any
+            time.</p>
+          <p>From time to time, we may restrict access to some or all parts of our Services.</p>
+          <p>You are responsible for making all arrangements necessary for you to have access to Services. You are also
+            responsible for ensuring that all persons who access Services through your internet connection are aware of
+            these Terms, and that they comply with them.</p>
+          <h4>9. Content On The Services</h4>
+          <p>All Content you post on the Services (such as product reviews) is the sole responsibility of the person who
+            originated such Content.</p>
+          <p>Although Meshada does not routinely screen or monitor content posted by users of the Services, Meshada
+            reserves
+            the
+            right to do so and to remove content which violates these Terms (or applicable law) of which Meshada becomes
+            aware,
+            but Meshada is under no obligation to do so. Any use or reliance on any Content or materials posted via the
+            Services or obtained by you through the Services is at your own risk. If we are notified by a third party
+            that
+            the Content you submit or post is in violation of these Terms or any applicable law, either in letter or in
+            spirit of these Terms, we reserve the right to remove such Content from the Services without notice to
+            you.</p>
+          <p>Meshada does not endorse, support, represent or guarantee the completeness, truthfulness, accuracy, or
+            reliability
+            of any Content or communications posted via the Services or endorse any opinions expressed by users of the
+            Services. You understand that by using the Services, you may be exposed to Content that might be offensive,
+            harmful, inaccurate or otherwise inappropriate, or in some cases, postings that have been mislabeled or are
+            otherwise deceptive. Under no circumstances will Meshada be liable in any way for any Content, including,
+            but
+            not
+            limited to, any errors or omissions in any Content, or any loss or damage of any kind incurred as a result
+            of
+            the use of any Content posted, emailed, transmitted or otherwise made available via the Services or
+            broadcast
+            elsewhere.</p>
+          <p>Following termination or deactivation of your account, or if you remove any Content from the Services, we
+            may
+            retain your Content for a commercially reasonable period of time for backup, archival, or audit purposes.
+            Furthermore, we and other users of the Services may retain and continue to use, store, display, reproduce,
+            modify, create derivative works, perform, and distribute any of your Content that other users have stored or
+            shared through the Services.</p>
+          <p>We allow you to follow other Meshada users and items they have compiled on the Services. By using the
+            Services,
+            you agree to allow other users of the Services to follow you.</p>
+          <h4>10. Your Rights</h4>
+          <p>You retain your rights, including copyright and other intellectual property rights, to any Content you
+            submit,
+            post or display on or through the Services. By submitting, posting or displaying Content on or through the
+            Services from time to time, you grant Meshada a worldwide, non-exclusive, perpetual, irrevocable,
+            royalty-free
+            license (with the right to sublicense) to use, copy, reproduce, process, adapt, modify, publish, transmit,
+            display, create derivative works from, and distribute such Content in any and all media or distribution
+            methods
+            (whether now known or later developed).</p>
+          <p>You agree that this licence includes the right for Meshada to make such Content available to other
+            companies,
+            organisations or individuals who partner with Meshada for the syndication, broadcast, distribution or
+            publication
+            of such Content on other media and services.</p>
+          <p>You agree that no compensation will be payable to you in respect of any of the foregoing uses by Meshada,
+            or
+            other
+            companies, organisations or individuals who partner with Meshada with respect to the Content that you
+            submit,
+            post,
+            transmit or otherwise make available through the Services. You waive all moral rights (or similar or
+            equivalent
+            rights in other jurisdictions) you have in such Content to the fullest extent permitted by law.</p>
+          <p>Meshada may modify or adapt your Content in order to transmit, display or distribute it over computer
+            networks
+            and
+            in various media and/or make changes to your Content as are necessary to conform and adapt that Content to
+            any
+            requirements or limitations of any networks, devices, services or media.</p>
+          <p>You are responsible for your use of the Services, for any Content you provide, and for any consequences
+            thereof, including the use of your Content by other users and Meshada's third party partners. You understand
+            that
+            your Content may be used, reproduced or displayed by Meshada's Partners and if you do not have the right to
+            submit
+            Content for such use, it may subject you to liability. Meshada will not be responsible or liable for any use
+            of
+            your Content by Meshada in accordance with these Terms. You represent and warrant that you have all the
+            rights,
+            power and authority necessary to grant the rights granted herein to any Content that you submit.</p>
+          <p>Meshada gives you a personal, worldwide, royalty-free, revocable, non-sub-licensable, non-assignable and
+            non-exclusive licence to use the Services (which will include future updates made available to you from time
+            to
+            time provided that you understand that such updates may be subject to additional terms notified to you at
+            the
+            time that such update is made available), subject to these Terms. This licence is for the sole purpose of
+            enabling you to use and enjoy the benefit of the Services as provided by Meshada, in the manner permitted by
+            these
+            Terms.</p>
+          <p>The rights in the Service are licensed, not sold to you. Except to the extent permitted by applicable law,
+            you
+            may not copy, reproduce, republish, disassemble, decompile, reverse engineer, adapt, alter, edit,
+            re-position,
+            rebrand, change, distribute, lend, hire, sub-license, rent, make a derivative work from the software in the
+            Services.</p>
+          <h4>11. Meshada Rights</h4>
+          <p>All right (including copyright, trademarks and other intellectual property rights), title, and interest in
+            and
+            to the Services and the Content (excluding Content provided by users of the Services) including but not
+            limited
+            to all information, data, text, maps, graphics, the "look and feel", logos, icons, trade marks, images,
+            video
+            clips, sound clips, editorial content, notices, data compilations, page layout, selection or arrangement of
+            the
+            contents of the Services, and the underlying code and software in the Services are and will remain the
+            exclusive
+            property of Meshada and its licensors. The Services are protected by copyright, trade mark, and other laws
+            and
+            treaties around the world. All such rights in the Services, Content (excluding Content provided by users of
+            the
+            Services) and related material are reserved.</p>
+          <p>Meshada is a registered trade mark of Meshada LTD. Both the trade mark and the Meshada logo are owned by us
+            and
+            cannot
+            be used without our prior written consent. Nothing in the Terms gives you a right to use the Meshada name or
+            any
+            of
+            the Meshada trade marks, logos, domain names, and other distinctive brand features. Any feedback, comments,
+            or
+            suggestions you may provide regarding Meshada, or the Services is entirely voluntary and Meshada will be
+            free
+            to
+            use
+            such feedback, comments or suggestions as it sees fit and without any obligation to you.</p>
+          <p>You may print off one copy, and may download extracts, of any page(s) from our Services for your personal
+            reference and you may draw the attention of others within your organisation to material posted on our
+            Services.
+            You must not modify the paper or digital copies of any materials you have printed off or downloaded in any
+            way,
+            and you must not use any illustrations, photographs, video or audio sequences or any graphics separately
+            from
+            any accompanying text.</p>
+          <p>You must not copy any part of the Content, with a view to creating or compiling any form of collection,
+            compilation, directory or database unless we provide you with our prior express written consent to do
+            so.</p>
+          <p>If you copy or download any part of the Services or Content in breach of these Terms, your right to use the
+            Services will cease immediately and you must, at our option, return or destroy any copies of the materials
+            you
+            have made.</p>
+          <h4>12. Restrictions On Content And Use Of The Services</h4>
+          <p>You shall not use the Services:</p>
+          <ul>
+            <li>a) in any way that violates any local, national or other laws or regulations or any order of a court in
+              any
+              relevant jurisdiction;
+            </li>
+            <li>b) for any purpose that is not permitted by these Terms;</li>
+            <li>c) in any way that infringes the rights of any person or entity, including their copyright, trade mark
+              or
+              other intellectual property rights, or other privacy or contractual rights;
+            </li>
+            <li>d) to distribute advertisements of any kind or post or otherwise communicate any false or misleading
+              material or message of any kind;
+            </li>
+            <li>e) in any way that intentionally or unintentionally harasses, annoys, threatens or intimidates any other
+              user;
+            </li>
+            <li>f) in any way that promotes or incites, whether intentionally or unintentionally, racism, bigotry,
+              hatred
+              or
+              physical harm of any kind;
+            </li>
+            <li>g) in any way that is abusive, defamatory, inaccurate, obscene, offensive, objectionable or sexually
+              explicit;
+            </li>
+            <li>h) to post photographs or images of another person without his/her permission (and if a minor, the
+              permission of the minor's legal guardian);
+            </li>
+            <li>i) to promote illegal or unlawful activities or in any way which may lead to the encouragement,
+              procurement
+              or carrying out of any unlawful or criminal activity or which may cause any harm, distress or
+              inconvenience
+              to
+              any person;
+            </li>
+            <li>j) to access, tamper with, cause damage to, or use non-public areas of the Services, Meshada's computer
+              systems, servers or equipment or the technical delivery systems of Meshada's providers;
+            </li>
+            <li>k) to access or attempt to access any data of other users of the Services or to penetrate any of the
+              security measures relating to the Services, or to probe, scan, or test the vulnerability of any system or
+              network or breach or circumvent any security or authentication measures;
+            </li>
+            <li>l) in any way that intentionally or unintentionally deceives, defrauds or swindles any other user;</li>
+            <li>m) to introduce any malware, virus or other harmful software program that intentionally or
+              unintentionally
+              damages or interferes with the operation of the Services, including but not limited to cancelbots, denial
+              of
+              service attacks, time-bombs, worms, Trojan horses, viruses or any other maleficent software or hardware;
+            </li>
+            <li>n) interfere with, or disrupt, (or attempt to do so), the access of any user, host or network including,
+              without limitation, sending a virus, overloading, flooding, spamming, mail-bombing the Services, or by
+              scripting the creation of Content in such a manner as to interfere with or create an undue burden on the
+              Services;
+            </li>
+            <li>o) to copy, modify, or distribute any other users' Content without their consent;</li>
+            <li>p) for commercial purposes other than as expressly permitted in these Terms;</li>
+            <li>q) to bypass measures used to prevent or restrict access to the Services;</li>
+            <li>r) to solicit or provide unlawful services;</li>
+            <li>s) to harvest or otherwise collect information about others without their consent;</li>
+            <li>t) to gain unauthorised access to the Services, the server on which the Services is stored or any
+              server,
+              computer or database connected to the Services;
+            </li>
+            <li>u) to forge any TCP/IP packet header or any part of the header information in any email or posting, or
+              in
+              any way use the Services to send altered, deceptive or false source-identifying information;
+            </li>
+            <li>v) to scrape, crawl or spider or otherwise use the Services or any Content for phishing, spamming,
+              trolling
+              or any unauthorised (commercial) purpose; or
+            </li>
+            <li>w) to promote or support or solicit involvement in any political platform or cause, religion (recognised
+              as
+              organised or unorganised), cult or sect of any kind; or
+            </li>
+            <li>x) in any way which would violate applicable UK, US or international trade sanctions law.</li>
+          </ul>
+          <p>Meshada reserves the right at all times (but will not have an obligation) to remove or refuse to distribute
+            any
+            Content on the Services and to terminate users or reclaim usernames. Meshada also reserves the right to
+            access,
+            read, preserve, or disclose any information as it reasonably believes is necessary to: (i) satisfy any
+            applicable law, regulation, legal process or governmental request; (ii) enforce the Terms, including
+            investigation of potential violations hereof; (iii) detect, prevent, or otherwise address fraud, security or
+            technical issues, (iv) respond to user support requests, or; (v) protect the rights, property or safety of
+            Meshada,
+            its users and the public.</p>
+          <p>Except as permitted through the Services (or these Terms), you have to use the Meshada API if you want to
+            reproduce, modify, create derivative works, distribute, sell, transfer, publicly display, publicly perform,
+            transmit, or otherwise use the Content or Services.</p>
+          <p>While we will do what we can to protect the security of your Content and account, we cannot guarantee that
+            unauthorised third parties will not be able to defeat our security measures. Please notify us immediately of
+            any
+            compromise or unauthorized use of your account.</p>
+          <h4>13. Promotions</h4>
+          <h4>a) Meshada Promotions terms and conditions (“Meshada Promotion Terms”)</h4>
+          <p>From time to time, Meshada may run promotions, including promotional discount codes, which apply to orders
+            made
+            through our site. These Meshada Promotion Terms apply to all Meshada promotions. Each
+            Meshada
+            promotion will also have specific terms and conditions. The specific terms and conditions for current
+            Meshada
+            promotions will be displayed in this section and/or in any communication you may receive informing you of
+            the
+            promotion (usually email). If there is a conflict between these Meshada Promotion Terms and the specific
+            promotion
+            terms, the specific promotion terms will prevail.</p>
+          <p>By using a promotional code and/or taking part in a Meshada promotion you will be deemed to have read and
+            understood the applicable terms and agreed to be bound by them. The Terms displayed on the Meshada sites
+            shall
+            apply to all Meshada promotions.</p>
+          <p>Meshada promotions are an arrangement between you and Meshada, and
+            not
+            between you and the Retailer Partner. As such, any discount will not be reflected in communications you may
+            receive from the Retailer Partner regarding the order. Meshada promotional codes have no cash value, cannot
+            be
+            transferred, forwarded or reassigned and cannot be redeemed for cash. Meshada promotional codes cannot be
+            used
+            in
+            conjunction with any other offer.</p>
+          <p>Meshada reserves the right to suspend, change or cancel any promotion, at any time, at our discretion.
+            Meshada
+            may
+            update these Meshada Promotion Terms from time to time and reserves the right to add to them as and where
+            necessary. You should review these Meshada Promotion Terms periodically for changes.</p>
+          <p>If you return items bought using a promotional offer, any refund you may be entitled to receive will not
+            include the redemption value of that promotional offer. You will receive no more than the amount you paid
+            towards the final basket price.</p>
+          <h4>b) Retailer Partner Promotions terms and conditions (“Retailer Partner Promotion Terms”)</h4>
+          <p>From time to time, Meshada may permit customers using the Meshada sites to take part in competitions and
+            promotions
+            offered by our retailer partners (“Retailer Promotions”). Retailer Promotions will be subject to any
+            specific
+            terms and conditions set by the Retailer Partner and usually available on the Retailer Partner’s website.
+            You
+            should ensure that you read the specific promotion terms and conditions on the Retailer Partner’s website.
+            From
+            time to time, Meshada may identify that a Retailer Promotion is ‘ending soon’ or is a 'limited time offer'.
+            This
+            means that the end date for the applicable Retailer Promotion falls within the next six days. Meshada
+            receives
+            such
+            end date information from our Retailer Partners and takes reasonable steps to ensure that this information
+            is
+            accurate and up to date. Notwithstanding the foregoing, you should ensure that you read the applicable
+            Retailer
+            Promotion terms and conditions on the relevant Retailer Partner’s website for full details and to confirm
+            the
+            end date. By using a promotional code and/or taking part in a Retailer Partner’s promotion on the Meshada
+            sites
+            you
+            will be deemed to have read and understood the terms relating to the Retailer Promotions and agree to be
+            bound
+            by them.</p>
+          <p>For orders placed via a Retailer Partner’s website, we will provide a promotional code to be entered at the
+            Retailer Partner’s checkout. You must ensure that the promotional code is correctly inputted at checkout to
+            apply any discount to your order.</p>
+          <h4>14. Sanctions</h4>
+          <p>Meshada complies with all applicable US sanctions law in accordance with Meshada’s sanctions
+            policy.</p>
+          <h4>15. The Services Are Available "as-is"</h4>
+          <p>Your access to and use of the Services or any Content is at your own risk. You understand and agree that
+            the
+            Services is provided to you on an "AS IS" and "AS AVAILABLE" basis.</p>
+          <p>Without limiting the foregoing, Meshada AND ITS PARTNERS DISCLAIM TO THE MAXIMUM EXTENT PERMITTED BY LAW
+            ANY
+            WARRANTIES, REPRESENTATIONS (OTHER THAN FRAUDULENT MISREPRESENTATION), GUARANTEES OR CONDITIONS, WHETHER
+            EXPRESS
+            OR IMPLIED.</p>
+          <p>Meshada makes no warranty and disclaims all responsibility and liability for the completeness, accuracy,
+            availability, functionality, compatibility, freedom from defects, timeliness, security, performance,
+            availability, or reliability of the Services or any content thereon. Meshada will not be responsible or
+            liable
+            for
+            any harm to your computer system, loss of data, or other harm that results from your access to or use of the
+            Services, or any Content. You also agree that Meshada has no responsibility or liability for the deletion
+            of,
+            or
+            the failure to store or to transmit, any Content and other communications maintained by the Services.
+            Meshada
+            makes
+            no warranty that the Services will meet your requirements or be available on an uninterrupted, secure, or
+            error-free basis. No advice or information, whether oral or written, obtained from Meshada or through the
+            Services,
+            will create any warranty not expressly made herein.</p>
+          <p>We do not provide any warranty or representation that the Services are free from infection by viruses or
+            anything else that has contaminating or destructive properties. You use the Services at your own discretion
+            and
+            risk and you will be solely responsible for any damage to your computer, mobile device or network that
+            results
+            from your use of the Services. We will not be liable to you for any loss or damage caused by a distributed
+            denial-of-service attack, viruses or other technologically harmful material that may infect your computer
+            equipment, computer programs, data or other proprietary material due to your use of the Services or to your
+            downloading of any Content posted on it, or on any website or application linked to it.</p>
+          <p>We are not liable to you for any inability to access the Services at any time, for any reason (including
+            but
+            not limited to any planned or unplanned downtime, or any outages on networks (including mobile networks) or
+            when
+            you are not in an area supported by mobile coverage).</p>
+          <h4>16. Limitation Of Liability</h4>
+          <p>THIS SECTION OF THE TERMS IS IMPORTANT AND YOU SHOULD READ IT CAREFULLY.</p>
+          <p>TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, Meshada AND ITS SUBSIDIARIES, AFFILIATES, OFFICERS,
+            EMPLOYEES,
+            AGENTS, PARTNERS AND LICENSORS WILL NOT BE LIABLE FOR ANY:</p>
+          <ul>
+            <li>(i) LOSS OF PROFITS, SALES OR CONTRACTS;</li>
+            <li>(ii) LOSS OF INCOME OR REVENUE;</li>
+            <li>(iii) LOSS OF BUSINESS OPPORTUNITY OR GOODWILL OR REPUTATION;</li>
+            <li>(iv) LOSS OR CORRUPTION OF DATA OR INFORMATION;</li>
+            <li>(v) LOSS OF ANTICIPATED SAVINGS;</li>
+            <li>(vi) WASTED MANAGEMENT OR OFFICE TIME; OR</li>
+            <li>(vii) ANY INDIRECT, INCIDENTIAL, SPECIAL, CONSEQUENTIAL OR PUNITIVE DAMAGES,</li>
+          </ul>
+          <p>ARISING FROM OR IN ANY WAY CONNECTED TO:</p>
+          <ul>
+            <li>(i) YOUR ACCESS TO OR USE OF THE SERVICES;</li>
+            <li>(ii) YOUR DELAY IN USING, OR INABILITY TO ACCESS OR USE THE SERVICES;</li>
+            <li>(iii) THE FULFILMENT OF YOUR ORDERS FROM OUR Meshada PARTNERS ONCE YOU HAVE PLACED AN ORDER THROUGH
+              Meshada,
+              INCLUDING BUT NOT LIMITED TO THE DELIVERY, EXCHANGE, RETURN OR REFUND OF ITEMS YOU HAVE PURCHASED FROM
+              Meshada
+              PARTNERS;
+            </li>
+            <li>(iv) ANY CONDUCT OR CONTENT OF ANY THIRD PARTY ON THE SERVICES, INCLUDING WITHOUT LIMITATION, ANY
+              DEFAMATORY, OFFENSIVE OR ILLEGAL CONDUCT OF OTHER USERS OR THIRD PARTIES;
+            </li>
+            <li>(v) USE OF ANY CONTENT, INFORMATION, PRODUCTS OR SERVICES OBTAINED THROUGH THE SERVICES; OR</li>
+            <li>(vi) UNAUTHORISED ACCESS, USE OR ALTERATION OF YOUR TRANSMISSIONS OR CONTENT,</li>
+          </ul>
+          <p>WHETHER BASED ON WARRANTY, CONTRACT OR TORT (INCLUDING NEGLIGENCE) OR OTHERWISE, EVEN IF WE HAVE BEEN
+            ADVISED
+            OF THE POSSIBILITY OF LOSS OR DAMAGES.</p>
+          <p>NOTWITHSTANDING THE EXCLUSIONS SET OUT IN THESE TERMS, IF WE ARE FOUND TO BE LIABLE TO YOU, OUR TOTAL
+            AGGREGATE
+            LIABILITY TO YOU (WHETHER IN CONTRACT, TORT, NEGLIGENCE, STRICT LIABILITY IN STATUE OR OTHERWISE) FOR ALL
+            AND
+            ANY DAMAGES, LOSSES OR CAUSES OF ACTION ARISING, BY REASON OR IN CONNECTION WITH YOUR USE OF THE SERVICES,
+            SHALL
+            BE LIMITED TO $100.</p>
+          <p>NOTHING IN THESE TERMS SHALL AFFECT YOUR STATUTORY RIGHTS AS A CONSUMER OR LIMIT OR EXCLUDE OUR LIABILITY
+            FOR
+            PERSONAL INJURY OR DEATH CAUSED BY OUR NEGLIGENCE OR FRAUDULENT MISREPRESENTATION OR ANY OTHER LIABILITY
+            WHICH
+            CANNOT BE EXCLUDED OR LIMITED UNDER LAW.</p>
+          <p>The laws of some countries do not allow some or all of the limitations described above. If these laws apply
+            to
+            you, some or all of the above limitations may not apply to you and you might have additional rights.</p>
+          <p>We will not be held responsible for any delay or failure to comply with our obligations under these
+            conditions
+            if the delay or failure arises from any cause which is beyond our reasonable control.</p>
+          <h4>17. Your Liability</h4>
+          <p>THIS SECTION OF THE TERMS IS IMPORTANT AND YOU SHOULD READ IT CAREFULLY.</p>
+          <p>You are responsible, and assume liability, for all Content that you add, or link to, the Services. You
+            agree
+            not to hold us responsible for things other users say or do through the Services. If you have a dispute with
+            another user, you release us (and our officers, directors, agents, subsidiaries, joint ventures, and
+            employees)
+            from any and all claims, demands, and damages (actual and consequential) of every kind and nature, known or
+            unknown, arising out of or in any way connected with such disputes.</p>
+          <p>YOU SHALL INDEMNIFY US AND KEEP US FULLY INDEMNIFIED ON DEMAND FROM AND AGAINST ALL LIABILITIES, COSTS,
+            EXPENSES, DAMAGES AND LOSSES, LEGAL COSTS (CALCULATED ON A FULL INDEMNITY BASIS) AND ALL OTHER REASONABLE
+            PROFESSIONAL COSTS (INCLUDING COSTS OF DEFENSE OF CLAIMS, SUITS OR PROCEEDINGS BROUGHT BY THIRD PARTIES))
+            AND
+            EXPENSES SUFFERED OR INCURRED BY US ARISING OUT OF OR IN CONNECTION WITH YOUR USE OF THE SERVICES, THE
+            CONTENT,
+            YOUR BREACH OF THESE TERMS AND/OR AS A RESULT OF YOUR VIOLATION OF THESE TERMS AND/OR AS A RESULT OF YOUR
+            VIOLATION OF ANY APPLICABLE LAWS OR REGULATIONS.</p>
+          <h4>18. Termination</h4>
+          <p>We reserve the unconditional right to suspend, withdraw, terminate, amend or restrict access to some parts
+            of
+            the Services, or to the Services entirely, to you at any time immediately without notice for any reason,
+            including (without limitation) in circumstances where;</p>
+          <ul>
+            <li>(i) we have reasonable grounds to suspect unauthorised or fraudulent use of the Services;</li>
+            <li>(ii) we reasonably suspect that you have not complied with these Terms; or</li>
+            <li>(iii) we reasonably suspect a breach of confidentiality or infringement of our intellectual property
+              rights
+              by you or a third party;
+            </li>
+          </ul>
+          <p>and to the maximum extent permitted by the law, we expressly exclude all relevant conditions, warranties of
+            any
+            kind (either express or implied) and other terms which might otherwise be implied by statute, common law or
+            the
+            law of equity in relation to any liability that you may claim we owe to you in respect of such suspension,
+            withdrawal or amendment.</p>
+          <p>On termination of these Terms (for whatever reason) all licences and rights granted to you in relation to
+            the
+            Services shall immediately come to an end.</p>
+          <h4>19. Waiver And Severability</h4>
+          <p>The failure of Meshada to enforce any right or provision of these Terms will not be deemed a waiver of such
+            right
+            or provision. In the event that any provision of these Terms is held to be invalid or unenforceable, the
+            remaining provisions of these Terms will remain in full force and effect.</p>
+          <h4>20. Governing Law And Jurisdiction</h4>
+          <p>The American legal system will have exclusive jurisdiction over any claim arising from, or related to, a
+            visit to or
+            your use of the Services. These Terms and any dispute or claim arising out of or in connection with them or
+            their subject matter or formation (including non-contractual disputes or claims) shall be governed by and
+            construed in accordance with the law of the United States.</p>
+          <h4>21. Entire Agreement</h4>
+          <p>These Terms are the entire and exclusive agreement between Meshada and you regarding the Services
+            (excluding
+            any
+            services for which you have a separate agreement with Meshada that is explicitly in addition or in place of
+            these
+            Terms), and these Terms supersede and replace any prior agreements between Meshada and you regarding the
+            Services.
+            Other than members of the group of companies of which Meshada is the parent, no other person or company will
+            be
+            third party beneficiaries to the Terms.</p>
+          <p>You acknowledge that you have not, in agreeing to these Terms, relied on any representation, warranty, or
+            undertaking not expressly incorporated in them.</p>
+          <p>If any provision of these Terms is found by a proper authority to be unenforceable or invalid, such
+            unenforceability or invalidity shall not render these Terms unenforceable or invalid as a whole and in such
+            event, such provision shall be changed and interpreted so as to best accomplish the objectives of such
+            unenforceable or invalid provision within the limits of applicable law or applicable court decisions.</p>
+          <p>If a dispute arises between you and us, we strongly encourage you to first contact us directly to seek a
+            resolution at the address given below or via e-mail at <a
+              href="mailto:legal@Meshada.com">legal@Meshada.com.</a>.
+            We
+            will consider reasonable requests to resolve the dispute through alternative dispute resolution procedures,
+            such
+            as mediation or arbitration, as alternatives to litigation.</p>
+          <p>Any failure by us to exercise any right or remedy under these Terms does not constitute a waiver of that
+            right
+            or remedy.</p>
+          <p>The Services licensed personally to you and you may not assign, license, sub-license or transfer any right
+            or
+            obligation of these Terms to any third party.</p>
+          <p>We may transfer any of our rights or obligations under these Terms to any third party but if we do so we
+            will
+            ensure that any company to whom we transfer our rights or obligations will continue to honor your rights
+            under
+            them.</p>
+          <p>Nothing in these Terms shall be deemed to constitute a partnership between the parties nor constitute
+            either
+            party the agent or employee of the other for any purpose.</p>
+          <p>Meshada may revise these Terms from time to time, the most current version will always be available <a
+            href="/help/terms-and-conditions/">here</a>. If the revision, in Meshada's sole discretion, is material
+            Meshada
+            will
+            notify you via an e-mail to the email associated with your account. By continuing to access or use the
+            Services
+            after those revisions become effective, you agree to be bound by the revised Terms.</p>
+          <p>These Services are operated and provided by Meshada Ltd. If you have any questions about these Terms,
+            please contact us.</p>
+          <p>This Agreement has been drawn up in the English language. In case of discrepancies between the English text
+            version of this Agreement and any translation, the English version shall prevail.</p>
+          <p>Effective Date: February 20, 2022</p>
+        </div>
+        <div *ngIf="privacy" class="privacy">
+          <h2>Data Protection and Privacy Notice</h2>
+          <p>This Notice applies to anyone who visits Meshada’s websites or Meshada’s mobile applications (the “Sites”),
+            and
+            any
+            other platforms Meshada owns or controls and makes available (the “Meshada Platforms”). We refer to the
+            Sites
+            and the
+            Meshada Platforms as the “Services”.</p>
+          <p>When you use the Services, you access linked pages or blogs, features and content (including any
+            information,
+            text, graphics, photos, lists of items compiled by you, comments, reviews, links, or other materials
+            uploaded,
+            downloaded or appearing on, or linked to the Services) (collectively the “Content”).</p>
+          <p>Any personal data about our users (the “User” or “you”) provided to or gathered by the Services is
+            controlled
+            by Meshada LTD (a company incorporated in England and Wales, with company number 07132083 and with a
+            registered
+            office at The Minster Building 7th Floor, 21 Mincing Lane, London EC3R 7AG) ("Meshada", “we”, “our” or
+            “us”).
+            For
+            the purposes of General Data Protection Regulation (the "GDPR"), Meshada acts as a “Controller” as defined
+            under
+            the GDPR (“Controller”).</p>
+          <h4>1. What Does This Notice Cover?</h4>
+          <p>This Notice covers Meshada’s treatment of personal data that Meshada gathers when you access the Services
+            and/or
+            access the Content. We explain what information we gather, why we gather it and the choices you have
+            regarding
+            your personal data.</p>
+          <h4>2. What Information Does Meshada Collect, and How?</h4>
+          <p>As customers, you do not have any legal obligation to provide any information to Meshada. However, we
+            require
+            certain information from you in order to operate properly, including completing a transaction on your
+            behalf.
+            Login credentials (email and username) enable us to personalize and improve our services. You hereby agree
+            and
+            acknowledge that any information you do provide to us is provided at your own free will, for the purposes
+            mentioned in this Privacy Notice and that we may keep such information in a database(s) which will be
+            registered
+            and kept in accordance with applicable laws and regulations.</p>
+          <h5>a) Information You Provide to Us</h5>
+          <p>We receive and store any information you enter on the Services or provide to us in any other way. The types
+            of
+            information provided by you may include your full name, email address, username, password, home and billing
+            address, shipping address, order details of transactions carried out on the Sites, and payment information
+            (payment information is held by our payment processors rather than us).</p>
+          <h5>b) Information Collected Automatically</h5>
+          <p>i. We receive and store certain types of information whenever you interact with the Sites or use another
+            feature of the Services. In other words, when you are using the Services we are aware of it and may gather,
+            collect and record the information relating to such usage, either independently or through the help of
+            third-party services as detailed below. Meshada automatically receives and records information on our server
+            logs
+            from your browser including your IP address, certain cookie information (please see our Cookie Policy for
+            further information) unique identifiers (such as click IDs) and the page you requested.</p>
+          <p>ii. We automatically collect usage information, such as the numbers and frequency of visitors to the
+            Services,
+            similar to user music preference data or to TV ratings that indicate how many people watched a particular
+            show.
+            Meshada only uses this data in aggregate form, that is, as a statistical measure, and not in a manner that
+            would
+            identify you personally. This type of aggregate data enables us to figure out how often customers use parts
+            of
+            the Services or another feature of the Content so that we can make the Services appealing to as many
+            customers
+            as possible, and improve the Content.</p>
+          <p>iii. We also collect information about the devices you use to access our Services. This includes, for
+            example,
+            the type of computer or device you use, the hardware model, operating system and software.</p>
+          <h5>c) E-mail Communications</h5>
+          <p>We often receive a confirmation when you open an email from Meshada if your computer supports this type of
+            program. Meshada uses this confirmation to help us decide how to make emails more interesting and
+            helpful.</p>
+          <h5>d) Location Information</h5>
+          <p>When you download or use apps created by Meshada or its affiliates or subsidiaries and, where applicable,
+            have
+            requested or consented to location services, we may receive information about your location. We may use this
+            information to provide you with personalised content and location-based services, such as search results.
+            Most
+            mobile devices allow you to turn off location services. To learn more about what information your device
+            makes
+            available to us, please also check the policies of your device manufacturer or software provider.</p>
+          <h4>3. What About Cookies?</h4>
+          <p>Technologies such as cookies, beacons, tags and scripts are used by Meshada and our partners, affiliates,
+            analytics or service providers. These technologies are used in analyzing trends, administering the Sites,
+            tracking users’ movements around the Sites and to gather demographic information about our user base as a
+            whole.
+            We may receive reports based on the use of these technologies by these companies on an individual as well as
+            aggregated basis.</p>
+          <p>Please see our <a href="/help/cookie-policy/">Cookie Policy</a> for information as to how we use cookies in
+            relation to the Services.</p>
+          <h4>4. Why Do We Collect Information?</h4>
+          <p>We use the information we collect in order to:</p>
+          <p>Operate and improve the Services and to display Content</p>
+          <p>Allow you to take full advantage of the Services, including using “Wish Lists”</p>
+          <p>Allow you to order products on the Sites (where applicable)</p>
+          <p>Process or facilitate payments through third party payment processors (where applicable)</p>
+          <p>Recommend relevant products, and make it easier for you to track products you’re interested in</p>
+          <p>Offer you a personalised experience of the Services and on the Meshada Sites. This process constitutes
+            profiling
+            under the GDPR</p>
+          <p>Communicate with you about your orders and provide customer service, technical assistance and collect
+            feedback</p>
+          <p>Communicate with you about products, sale reminders, services and promotional offers</p>
+          <p>Administer your account if you have one, and update our records</p>
+          <p>Enable third-party service providers and contractors to carry out technical, logistical or other functions
+            on
+            our behalf</p>
+          <p>Conduct research, troubleshoot problems, and detect and protect against error, abuse of the Services, fraud
+            or
+            other criminal activity</p>
+          <p>Control risk, comply with laws and regulations, and comply with other legal process and law enforcement
+            requirements</p>
+          <p>Produce aggregated statistical reports (provided that the reports do not identify customers)</p>
+          <h4>5. Where Will We Store Your Information?</h4>
+          <p>To provide the Services, the information that we collect from you may be transferred to, and stored at, a
+            destination outside the European Economic Area (“EEA”). It may also be processed and used by staff operating
+            outside the EEA who work for us or by one of our third-party service providers. Such staff may be engaged
+            in,
+            among other things, the fulfilment of your request, the processing of your payment details and the provision
+            of
+            support services. We will take all steps reasonably necessary to ensure that third parties to whom we
+            transfer
+            any data provide sufficient protection of that data.</p>
+          <h4>6. Sharing Information With Third Parties</h4>
+          <p>We share your information only as described in this Notice and require commercial entities with which we
+            share
+            your information to agree to keep it confidential.</p>
+          <h5>a) Meshada Partners</h5>
+          <p>We work with a variety of partners (“Meshada Partners”) in order to offer you the widest possible choice of
+            fashion items on the Sites. There are two ways to buy products through the Services:</p>
+          <p>Buying on a Meshada Partner website: Sometimes when you select a product, you will be taken directly to the
+            Meshada
+            Partner website and asked by the Meshada Partner to provide further personal details related to the
+            transaction.
+            The information you enter on the Meshada Partner website will be collected, stored, and processed in
+            accordance
+            with the privacy policy of the Meshada Partner.</p>
+          <p>Buying on the Sites via Meshada’s integrated checkout (“Integrated Checkout”): For certain products you
+            wish
+            to
+            buy, we operate an Integrated Checkout service, allowing you to check out these products on the Sites. In
+            order
+            to process these transactions, we will need to share your transaction information (such as name and shipping
+            details) with the relevant Meshada Partner using our secure systems. The information you enter on the
+            Integrated
+            Checkout will be collected, stored, and processed in accordance with this Notice and in accordance with the
+            privacy policies of the Meshada Partners from whom you wish to purchase the products.</p>
+          <p>Please note that: (i) you should carefully review the Meshada Partner privacy policy before completing any
+            transaction involving a Meshada Partner; and (ii) the Meshada Partner is solely responsible for its use and
+            sharing of
+            your information.</p>
+          <p>Promotions: We may also share your data with Meshada Partners in connection with certain promotions and
+            competitions. These will be subject to additional rules and conditions which will be made available to you
+            at
+            the time of entering any such competition or promotion. You should carefully review the rules and conditions
+            relating to such competitions and promotions.</p>
+          <p>Aggregate Information: We may also share aggregate information with the Meshada Partners about how our
+            customers,
+            collectively, use the Content. We share this type of statistical data so that the Meshada Partners also
+            understand
+            how often people use the Content, so that they, too, may provide you with an optimal online experience.
+            Meshada
+            never discloses aggregate information to a Meshada Partner in a manner that would identify you personally,
+            unless
+            we need to in order to complete a transaction on your behalf.</p>
+          <h5>b) Payment processors</h5>
+          <p>For purchases made on the Sites via the Integrated Checkout, your payment information (e.g. credit or debit
+            card details) will be processed by third-party payment process providers such as Klarna or Stripe.</p>
+          <p>Please note: (i) you should carefully review the third-party payment processor privacy policy before
+            completing
+            any transaction via the Integrated Checkout service; and (ii) the third-party payment processor is solely
+            responsible for its use and sharing of your information.</p>
+          <h5>c) Affiliate Networks</h5>
+          <p>Meshada shares personal data with affiliate networks such as Rakuten (“Affiliate Network”) for the purpose
+            of
+            Meshada
+            participating as a publisher in the Affiliate Network and entering into engagements with Partners. Where the
+            Affiliate Network collects and uses personal data for its own permitted purposes, the Affiliate Network acts
+            as
+            a separate and independent Controller in relation to that personal data. The Affiliate Network will use the
+            personal data in accordance with applicable data protection laws and regulations and will individually and
+            separately fulfil all obligations that apply to it as a Controller. </p>
+          <h5>d) Advertisers</h5>
+          <p>Advertisers and advertising networks may use automated technologies such as cookies to collect information
+            about your website activity on the Sites and other sites. This is used to target advertising to you online
+            that
+            may be of interest to you. For more information on cookies and how to reject targeted advertising or
+            interest-based advertising cookies, please read our <a href="/help/cookie-policy/">Cookie Policy</a>.</p>
+          <h5>e) Social media and other platform services</h5>
+          <p>Information to/from third-party social media services:</p>
+          <p>We receive the usernames and passwords for your accounts and profiles on third-party sites with which the
+            Sites
+            interoperate. For example, by logging into the Sites via Facebook, you are giving us permission to obtain
+            certain information from your Facebook account, such as your name and email address. This may give us
+            automatic
+            access to certain personal information retained by a social media site about you (e.g. content viewed by
+            you,
+            content liked by you and information about the advertisements you have been shown or may have clicked on).
+            Where
+            this information is received by us, we will use this information to further personalise your experience on
+            the
+            Meshada Sites. We may share your data (such as unique identifiers derived from your registration information
+            on
+            our
+            website or app) with these third-party sites. This allows us to link your devices and provide you with a
+            seamless experience across different devices that you use.</p>
+          <p>We sometimes work with social media services, such as Facebook, to provide custom audiences to partners. A
+            custom audience is a type of audience made from a customer list. It is a form of targeted advertising that
+            lets
+            our partners advertise to their existing audiences who are on Facebook. In the event that Meshada creates a
+            custom
+            audience, we will use aggregated information we already hold about users such as email addresses. Our user
+            information is hashed before it is sent to Facebook. This process turns the information into randomised code
+            and
+            cannot be reversed.</p>
+          <p>Alternatively, a partner might request we work with Facebook to create a lookalike audience. Facebook will
+            generate a lookalike audience from a source audience, such as a custom audience, we have already shared with
+            them. A lookalike audience is created by Facebook identifying qualities of the people in the source audience
+            and
+            delivering targeted advertising to an audience of people who “look like” the source audience. A lookalike
+            audience is a way for partners to reach new users who might be interested in our Services because they are
+            similar to our existing users.</p>
+          <p>We may also work with platforms, such as Google, to create audience groups from the email addresses we hold
+            and
+            retarget users across different advertising networks.</p>
+          <h5>f) Analytics</h5>
+          <p>We have implemented the Google Analytics Demographics and Interest Reporting feature and may share your
+            information to analytics and search engine providers that help us to improve and optimize the Services.</p>
+          <h5>g) Agents</h5>
+          <p>We employ other companies and people to perform tasks on our behalf and need to share your information with
+            them only to the extent necessary to provide products or services to you. Unless we tell you differently,
+            Meshada’s
+            agents do not have any right to use the information we share with them beyond what is necessary to assist
+            us.</p>
+          <h5>h) User Profiles and Other Information You Post</h5>
+          <p>If the service is available on the Sites, User profile information including your username, name, email
+            address, and other information you enter (“User Submissions”) may be displayed to other Meshada users to
+            facilitate
+            user interaction within the Services and allow you to follow other users, and them to follow you. Email
+            addresses are used to add new User Submissions to user profiles and to communicate through User Submissions.
+            Any
+            information that you voluntarily disclose online (on discussion boards, in messages and chat areas, through
+            reviews in product pages, etc.) becomes publicly available and can be viewed, collected, and used by others.
+            Any
+            images, captions, physical descriptions, personal interests, or other content that you submit to the
+            Services
+            may be redistributed through the Internet and other media channels and may be viewed by the general
+            public.</p>
+          <p>Please be aware that whenever you voluntarily post information to public areas on the Services or any other
+            public forums, such information can be accessed by the public.</p>
+          <h5>i) To comply with legal requests</h5>
+          <p>We may provide your information to relevant third parties when we believe in good faith that it is
+            necessary
+            in
+            order to (i) comply with the law, regulation or a legal request; (ii) enforce or apply our conditions of use
+            in
+            other agreements; or (iii) protect the rights, property, or safety of Meshada, our employees, our users, or
+            others.
+            This may include exchanging information with other companies and organizations for fraud protection and
+            credit
+            risk reduction.</p>
+          <h5>j) Third parties where a corporate transaction is contemplated</h5>
+          <p>In some cases, we may choose to buy or sell assets. In these types of transactions, customer information is
+            typically one of the business assets that are transferred. In addition, in the event of a merger,
+            acquisition,
+            reorganization, asset sale, or in the unlikely event that Meshada goes out of business or enters bankruptcy,
+            customer information may be one of the assets that are transferred to or acquired by a third party. If such
+            transfers occur, the third-party transferee may continue to use your information as set out in this
+            Notice.</p>
+          <h5>k) Affiliates</h5>
+          <p>We may share some or all of your information with any of our parent companies, subsidiaries, joint
+            ventures,
+            or
+            other companies under common control with us.</p>
+          <h4>7. How is Your Information Kept Secure?</h4>
+          <p>We take care to maintain appropriate safeguards and security features to protect the integrity and privacy
+            of
+            the information you provide us with and to try to prevent unauthorised access to it. We encrypt your
+            information
+            to protect it from unauthorised use, and we use pseudonymisation, information access controls, and
+            firewalls.</p>
+          <p>All information you provide to us is hosted and stored on Amazon Web Services cloud-based services in
+            Ireland
+            which is also in compliant with ISO27001 standard. For further information on the measures taken by Amazon
+            to
+            protect the security of their servers and your information, please see: http://aws.amazon.com/security/. If
+            you
+            are not satisfied with the levels of security offered by our cloud provider, you should restrict the nature
+            and
+            amount of information which you include in your log data or not use the Services. Any payment transactions
+            will
+            be encrypted using Secure Socket Layer (SSL) technology.</p>
+          <p>If you choose to create an account with Meshada (a “Meshada Account”), the information in your Meshada
+            Account
+            is
+            protected by a password for your privacy and security. You need to ensure that there is no unauthorised
+            access
+            to your account and information by selecting and protecting your password appropriately and limiting access
+            to
+            your computer and browser by signing off after you have finished accessing your account. You are responsible
+            for
+            safeguarding the password that you use to access the Services and for any activities or actions under your
+            password. Meshada encourages you to use “strong” passwords (passwords that use a combination of upper and
+            lower
+            case letters, numbers and symbols) with your account. Meshada cannot and will not be liable for any loss or
+            damage
+            arising from your failure to comply with the above requirements.</p>
+          <p>The transmission of information via the Internet is not completely secure and we cannot guarantee the
+            security
+            of your data transmitted to the Services. Unauthorised entry or use, hardware or software failure, and other
+            factors, may compromise the security of user information at any time. Any transmission of data is at your
+            own
+            risk.</p>
+          <h4>8. What About Links To Third Party Websites?</h4>
+          <p>The Services contain links to other sites such as Meshada Partners. Meshada is not responsible for the
+            privacy
+            policies and/or practices on other sites. When linking to another site you should read the privacy policy
+            stated
+            on that site. This Notice only governs information collected on the Services.</p>
+          <h4>9. Data Retention</h4>
+          <p>Subject to any legal obligations to keep your information longer, we store the data you provide to us for
+            as
+            long as is necessary to provide the Services to you (and if you have a Meshada Account, for as long as you
+            have
+            a
+            Meshada Account), or until you ask us to delete it, whichever comes first.</p>
+          <p>After a request from a User to delete any data, a process will begin that permanently deletes the relevant
+            data. Once begun, this process cannot be reversed and data will be permanently deleted. Any data which is
+            not
+            deleted shall be kept in an anonymized manner.</p>
+          <p>Meshada collects and retains usage data, other metadata and statistical information about the use of the
+            Services
+            in an aggregated and anonymised format.</p>
+          <h4>10. What’s Our Legal Basis for Processing Your Information?</h4>
+          <p>We process your information where we have a legal basis for doing so.</p>
+          <h5>a) Necessary for our legitimate interest. Our legitimate interests include:</h5>
+          <p>Improving the Meshada Sites and Services and offering you a personalised experience.</p>
+          <p>Ensuring that our marketing communications, advertising and recommendations are relevant to you. </p>
+          <p>Understanding customer usage of the Services.</p>
+          <p>Ensuring the Services are managed correctly.</p>
+          <h5>b) Necessary for the performance of our contract with you.</h5>
+          <p>For example, in order to register and manage your Meshada Account, we collect your email address, password
+            and
+            any
+            other additional details you wish to add to your account.</p>
+          <h5>c) Based on your consent.</h5>
+          <p>For example, where you provide us with marketing consents in order to send you information about products
+            that
+            may be of interest to you. Your consent may be withdrawn at any time by contacting us.</p>
+          <h5>d) Necessary to comply with relevant legal obligations.</h5>
+          <p>For example, to make mandatory disclosures to law enforcement.</p>
+          <h4>11. What rights do You have in relation to the information We hold about You?</h4>
+          <p>You have certain rights in relation to the information that we hold about you, which are detailed below.
+            Some
+            of these rights only apply in certain circumstances.</p>
+          <h5>a) Access</h5>
+          <p>If you are based in the EU, you have a legal right under GDPR to request access to a copy of your personal
+            data
+            held by us. To do this, please contact us at gdpr@Meshada.com., use the subject line “DSAR” and include the
+            details
+            about what personal data you are looking for.</p>
+          <h5>b) Deletion</h5>
+          <p>To ask us to delete your Meshada Account, please following the instructions in the Account Settings section
+            of
+            your Meshada Account.</p>
+          <p>Please note that although your personal data may be removed from our databases, Meshada may retain the
+            anonymous
+            information contained in the data you provided, and such information will continue to be used by us for
+            statistical purposes.</p>
+          <h5>c) Correction</h5>
+          <p>If you have a Meshada Account, you can update certain information in your ‘Account’ settings, such as your
+            name,
+            email address, username, and password. The information that you can update or amend may change as the
+            Services
+            change.</p>
+          <h5>d) Marketing opt-out</h5>
+          <p>When you register for a Meshada Account, you can give your consent to receive certain marketing emails or
+            other
+            communications from us. We will use your information such as your email address to occasionally provide you
+            with
+            information about products and services which may be of interest to you.</p>
+          <p>If you no longer wish to receive marketing messages from us, or if you want to change the type and
+            frequency
+            of
+            these messages, you can change your preferences at any time in the Account Settings of your registered
+            Meshada
+            Account, or by clicking on the unsubscribe button in our marketing emails. Please note that it sometimes
+            takes
+            a
+            short amount of time to refresh our records for these purposes. We require all Meshada Partners to honor
+            your
+            opt-out requests if you elect to stop receiving marketing messages. If, for whatever reason, your opt-out
+            request is not honored, please let us know and we will attempt to resolve the issues.</p>
+          <p>When using the Meshada mobile application, your preferences for receiving push notifications and other
+            mobile
+            alerts can be configured in the settings of the app or the settings of your mobile device.</p>
+          <p>Please also be advised that you may not be able to opt-out of receiving non-promotional, transactional
+            messages, or information about your Meshada Account (e.g. service announcements or administrative
+            messages).</p>
+          <p>You can always opt not to disclose information, even though it may be needed to take advantage of the
+            Services.</p>
+          <p>Please note that if you choose not to receive or read legal notices from us, such as this Notice, those
+            legal
+            notices will still govern your use of the Services, and you are responsible for reviewing such legal notices
+            for
+            changes.</p>
+          <h4>12. Children</h4>
+          <p>We do not knowingly market or sell products for purchase by children. The Services are not designed for use
+            by
+            children under 13 years old. Children under 13 are not allowed to register with Meshada or use the Services,
+            or
+            submit personal data through the Services. We do not knowingly collect personal data from anyone under the
+            age
+            of 13. If you have any reason to believe that anyone under the age of 13 has provided their personal data to
+            us,
+            please contact us as specified below, and we will work to delete that information from our databases.</p>
+          <h4>13. Changes To This Notice</h4>
+          <p>Meshada reserves the right to change this Notice from time to time. Use of information we collect now is
+            subject
+            to the Notice in effect at the time such information is used. If we make substantial changes in the way we
+            use
+            personal data, we will notify you by posting an announcement on the Services or sending you an email.
+            Otherwise,
+            all other changes to this Notice are effective as of the stated “Last Revised” date.</p>
+          <h4>14. Questions Or Concerns</h4>
+          <p>If you have any questions or concerns regarding privacy on our Services or the Content, please send us a
+            detailed message <a href="/help/contact-us/">here</a>. We will make every effort to resolve your concerns.
+            If
+            your questions or concerns are not answered online, you may write to us at The Minster Building 7th Floor,
+            21
+            Mincing Lane, London EC3R 7AG.</p>
+          <p>This Agreement has been drawn up in the English language. In case of discrepancies between the English text
+            version of this Agreement and any translation, the English version shall prevail.</p>
+          <a class="displaced-legal-link" id="ccpa" name="ccpa"></a>
+          <h2>Your California Privacy Rights</h2>
+          <p>This section of the Notice supplements the Notice and applies to California residents only. It sets out
+            certain
+            information about Meshada’s collection, use and disclosure of personal information, and the rights that are
+            granted
+            to California residents under the California Consumer Privacy Act (“CCPA”).</p>
+          <p>Categories of personal information that Meshada collects:</p>
+          <ul>
+            <li>
+              <p>Identifiers (e.g. contact information or unique personal identifiers such as IP address or cookies)</p>
+            </li>
+            <li>
+              <p>Commercial information (e.g. transaction data)</p>
+            </li>
+            <li>
+              <p>Financial information (e.g. payment card details)</p>
+            </li>
+            <li>
+              <p>Internet or other electronic network activity (e.g. browsing history or app usage)</p>
+            </li>
+            <li>
+              <p>Inference derived from personal information</p>
+            </li>
+          </ul>
+          <p>Purpose for collecting and using personal information: We collect the categories of personal information
+            listed
+            above for the purposes listed above in ‘Why Do We Collect Information?’.</p>
+          <p>Categories of sources of personal information: We collect the categories of personal information listed
+            above
+            directly from you or your device or from third parties (e.g. third-party payment processors, or social media
+            networks, Meshada Partners, analytics providers).</p>
+          <p>Categories of third parties to whom Meshada discloses personal information: We may share the categories of
+            personal information listed above with third parties as described above in ‘Sharing Information with Third
+            Parties’.</p>
+          <p>Sale of personal information: We do not sell personal information about you to other companies for money.
+            We
+            do
+            allow some third parties (e.g. advertising partners) to collect information about your website activity via
+            automated technologies on the Sites, such as cookies. This is used to target advertising to you online that
+            may
+            be of interest to you. You can exercise control over the use of these technologies. See our <a
+              href="{cookie_policy_url}">Cookie Policy</a> in order to opt-out of this.</p>
+          <p>Your rights </p>
+          <p>As a California resident, you have the following rights in relation to your information:</p>
+          <ul>
+            <li>
+              <p>Access: Twice in any 12-month period, you have the right to request access to the personal information
+                that
+                we have collected about you during the past 12 months.</p>
+            </li>
+            <li>
+              <p>Deletion: You may request us to delete the personal information we have collected about you. We may
+                retain
+                certain information as required or permitted by applicable law.</p>
+            </li>
+            <li>
+              <p>Opt-out: You have the right to manage cookies as described in the Cookie Policy.</p>
+            </li>
+          </ul>
+          <p>To exercise the rights listed above, you can contact us at <a
+            href="{mailto_privacy_address}">privacy@Meshada.com</a>. We do not discriminate against you for requesting
+            any
+            of
+            the rights noted above.</p>
+          <div data-hypernova-key="CcpaOption" data-hypernova-id="f3f9c2d8-98ca-4d38-9bf8-d4d9f95d5395">
+            <div class="_3iRDJ">
+              <div class="_28Ee-"><p>You can opt-out or opt-in from the selling of your personal information according
+                to
+                the terms of CCPA legislation using the checkbox below.</p>
+                <div class="_272v1"><p>Do not sell my personal information</p>
+                  <div class="_9G0Or">
+                    <div class="_1fMen"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="_3jxjT"><span><svg aria-hidden="true" class="_1x27q svg-icon-info-icon"><use
+                xlink:href="#info-icon"></use></svg>You are opted-in on selling your data</span></div>
+              <div class="_1Wu5n">You can change your preferences at any time by visiting “Rights under CCPA” in the
+                bottom
+                of the page.
+              </div>
+            </div>
+          </div>
+          Last revised: 1 April 2021
+        </div>
+        <div *ngIf="cashback" class="cashback">
+          <h2>Cashback policy</h2>
+          <p>"Meshada" means Meshada LTD (a company incorporated in England and Wales, with company number 07132083 and
+            with
+            a
+            registered office at The Minster Building 7th Floor, 21 Mincing Lane, London EC3R 7AG). Meshada is also
+            referred
+            to
+            in this Cookie Policy as "we", "us", "our", and "ours".</p>
+          <p>This Cookie Policy applies to all of Meshada’s websites and mobile applications (the “Sites”) and any other
+            platforms Meshada owns or controls and makes available (the “Meshada Platforms”). We refer to the Sites and
+            the
+            Meshada
+            Platforms as the “Services”. This Cookie Policy also applies to any other linked pages or blogs, features,
+            content (including any information, text, graphics, photos, lists of items compiled by you, comments,
+            reviews,
+            links, or other materials uploaded, downloaded or appearing on, or linked to the Services), or applications
+            offered from time to time by Meshada in connection therewith (collectively the "Content").</p>
+          <p>Any changes to this policy will be posted here. We reserve the right to vary this Cookie Policy from time
+            to
+            time and such changes shall become effective as soon as they are posted.</p>
+          <h4>What are “Cookies”?</h4>
+          <p>A cookie is a small text file that is stored on your device when you visit certain websites. We use cookies
+            to
+            understand how you interact with our Services and distinguish you from other users of our Services. Among
+            other
+            benefits, this allows us to make improvements to the information and design of the Services and to provide
+            you
+            with better customer experience. The term “cookie” in this policy covers cookies and a range of other
+            similar
+            technologies, such as pixel tags.</p>
+          <p>It is easy to change your cookie settings. Please see ‘How do you opt-out of personalised advertising and
+            control other cookie settings?’ for further information on how to do this. However please be aware that if
+            you
+            delete, disable or opt-out of cookies, your online experience with the Services may be affected and some
+            features or areas of the Meshada Platforms and Services may be limited.</p>
+          <h4>What type of cookies do we use and why?</h4>
+          <p>We use the following categories of cookies on the Meshada Platforms:</p>
+          <p><em>Required cookies</em>. These cookies are necessary to allow us to operate the Services that you have
+            requested. For example, we use required cookies for site security and site integrity, account
+            authentication,
+            privacy preferences, maintenance data, to make the site work correctly for browsing and transactions, and
+            for
+            tracking user conversions on the Meshada Platforms. </p>
+          <p><em>Site Customization cookies</em>. These cookies are used to improve your experience of our Services and
+            operate according to your preferences. For example, they remember your login details and certain choices
+            that
+            you make on the Meshada Platform including content that you have viewed previously. Without these
+            technologies,
+            features like personalized recommendations or account preferences may not work correctly. </p>
+          <p><em>Analytical/performance cookies</em>. These cookies allow us to recognise and count the number of
+            visitors
+            and to see how visitors move around our Services when they are using them. This helps us to improve the way
+            our
+            Services work, for example, by ensuring that users are finding what they are looking for easily. These
+            cookies
+            collect anonymous information only and do not show personal details.</p>
+          <p><em>Personalised Advertising cookies</em>. These cookies are used to make our Services more relevant to you
+            and
+            to personalize advertising online that may be of interest to you. For example, they personalize features
+            such
+            as
+            (i) product searches and offers, (ii) recommended content, and (iii) adverts. They do not increase the
+            amount
+            of
+            content that you will be shown, but they will help limit the number of times you see the same content. To
+            opt-out of our use of these cookies, please refer to ‘How do you opt-out of personalized advertising and
+            control
+            other cookie settings?’ Note that opting out of this will not remove adverts, offers, or products; but may
+            make
+            them less relevant or more repetitive.</p>
+          <h4>What about third-party cookies?</h4>
+          <p>Third parties (for example, advertising networks and providers of external services like web traffic
+            analysis
+            services) may also store cookies on your device. These cookies are used by third parties to provide services
+            to
+            us, such as analytics/performance monitoring, or personalised advertising which may also include third
+            parties
+            using their cookies to show you adverts based on your past visits to the Sites. This means you may be shown
+            different products based on what you appear to be interested in and what you have viewed on the Sites as
+            well
+            as
+            other products deemed relevant to your browsing activity. In this way, advertising can be made as relevant
+            and
+            as useful to you as possible. </p>
+          <p>Note that we do not control cookies owned by third parties and it is your responsibility to configure your
+            preferences for third-party cookies based on your individual targeting and tracking preferences. </p>
+          <p>Below we have listed the third parties that place cookies on the Meshada Platforms, along with the purpose
+            for
+            which the cookies are used. For further information on these third-party cookies and how to opt-out, please
+            see
+            the third-party links provided. </p>
+          <table>
+            <thead>
+            <tr>
+              <th>Third party</th>
+              <th>Cookie use</th>
+              <th>Further information and opt-out details</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+              <td>Bing</td>
+              <td>Personalized advertising and analytics</td>
+              <td>Opt-out <a
+                href="https://account.microsoft.com/privacy/ad-settings/signedout?ru=https:%2F%2Faccount.microsoft.com%2Fprivacy%2Fad-settings">here</a>
+              </td>
+            </tr>
+            <tr>
+              <td>Criteo</td>
+              <td>Personalized advertising</td>
+              <td>Opt-out <a href="https://www.criteo.com/privacy/">here</a></td>
+            </tr>
+            <tr>
+              <td>Salesforce</td>
+              <td>Personalized advertising</td>
+              <td>Opt-out <a
+                href="https://www.salesforce.com/products/marketing-cloud/sfmc/audience-studio-consumer-choice/?mc=DMP">here</a>
+              </td>
+            </tr>
+            <tr>
+              <td>Adswizz</td>
+              <td>Personalized advertising</td>
+              <td>Opt-out <a href="https://www.adswizz.com/our-privacy-policy/">here</a></td>
+            </tr>
+            <tr>
+              <td>Facebook</td>
+              <td>Personalized advertising and analytics</td>
+              <td>Opt-out <a href="https://www.facebook.com/help/568137493302217">here</a></td>
+            </tr>
+            <tr>
+              <td>Pinterest</td>
+              <td>Personalized advertising</td>
+              <td>Opt-out <a href="https://help.pinterest.com/en-gb/article/personalization-and-data">here</a></td>
+            </tr>
+            <tr>
+              <td>Snapchat</td>
+              <td>Personalized advertising</td>
+              <td>Opt-out <a href="https://www.snapchat.com/l/en-gb/cookie-settings/">here</a></td>
+            </tr>
+            <tr>
+              <td>GetFeedback</td>
+              <td>Personalized advertising and analytics</td>
+              <td>Opt-out <a href="https://www.surveymonkey.com/mp/legal/cookies/">here</a></td>
+            </tr>
+            <tr>
+              <td>Branch</td>
+              <td>Personalized advertising</td>
+              <td>Opt-out <a href="https://branch.app.link/optout">here</a></td>
+            </tr>
+            <tr>
+              <td>Google Adwords</td>
+              <td>Personalized advertising and analytics</td>
+              <td>Opt-out <a href="https://adssettings.google.com/u/0/authenticated?hl=en">here</a></td>
+            </tr>
+            <tr>
+              <td>Google Doubleclick</td>
+              <td>Personalized advertising</td>
+              <td>Opt-out <a href="https://adssettings.google.com/u/0/authenticated?hl=en">here</a></td>
+            </tr>
+            <tr>
+              <td>Google Analytics</td>
+              <td>Analytics</td>
+              <td>Opt-out <a href="https://tools.google.com/dlpage/gaoptout">here</a></td>
+            </tr>
+            <tr>
+              <td>New Relic</td>
+              <td>Analytics</td>
+              <td>Opt-out <a href="https://newrelic.com/termsandconditions/cookie-policy">here</a></td>
+            </tr>
+            <tr>
+              <td>Rakuten</td>
+              <td>Analytics</td>
+              <td>Opt-out <a href="https://rakutenadvertising.com/en-uk/legal-notices/cookie-policy/">here</a></td>
+            </tr>
+            </tbody>
+          </table>
+          <p><br></p>
+          <h4>How do you opt-out of personalized advertising and control other cookie settings?</h4>
+          <p>Cookie settings on the Site. </p>
+          <p>All US users may opt in or out of the selling of their personal information according to the terms of CCPA
+            legislation using the checkbox featured in Meshada's <a href="/help/privacy-policy/">Privacy Policy</a>.
+          </p>
+          <p>Please bear in mind that opting out using the CCPA mechanism removes all non-essential cookies. Meshada
+            still
+            uses
+            essential first party cookies that will remain unless you also manually delete cookies on your device. </p>
+          <p>Browser settings:</p>
+          <ul>
+            <li>
+              <p>Block cookies: You can adjust your cookie preferences by activating the setting on your browser that
+                allows
+                you to refuse the setting of all or some cookies. The ""Help"" feature on most browsers will tell you
+                how
+                to
+                stop your browser from accepting new cookies. It should also tell you how to set up the browser to
+                notify
+                you when you receive a new cookie and how to disable cookies entirely. You can also disable or delete
+                similar data used by browser add-ons, such as flash cookies, by changing the add-ons settings or
+                visiting
+                the website of the browser manufacturer. Visit www.allaboutcookies.org for more information about how to
+                manage cookies on your particular browser.</p>
+            </li>
+            <li>
+              <p>Delete cookies: Your browser will also allow you to delete cookies that are currently set on your
+                device.
+                Please note that if you delete all of your cookies, all of your existing cookie preferences will also be
+                lost. This means that you will see the cookie banner again when you next visit our Site and you will
+                need
+                to
+                reset your cookie preferences. </p>
+            </li>
+          </ul>
+          <p>Device settings. You may also be able to adjust your cookie preferences in the settings of your device.
+            However, the settings you choose will not apply across your devices. This means that if you want to opt out
+            of
+            cookies on all devices, you must adjust your settings individually on each device and browser on which you
+            use
+            the Services. </p>
+          <p>Advertising Networks. You can opt-out of some third-party advertising cookies by visiting: The Digital
+            Advertising Alliance’s consumer choice page (http://optout.aboutads.info), the Network Advertising
+            Initiative’s
+            consumer choice page (http://optout.networkadvertising.org) or the European Interactive Digital Advertising
+            Alliance consumer choice page (http://youronlinechoices.eu). </p>
+          <p>Third parties. You can also adjust your third-party cookie preferences directly with the relevant third
+            party.
+            Please see ‘What about third party cookies?’ above for further details.</p>
+          <p>This Agreement has been drawn up in the English language. In case of discrepancies between the English text
+            version of this Agreement and any translation, the English version shall prevail.</p>
+          <p>Effective Date: 8 July 2021</p>
+        </div>
+        <div *ngIf="cookie" class="cookie">
+          <h2>Cookie policy</h2>
+          <p>"Meshada" means Meshada LTD (a company incorporated in England and Wales, with company number 07132083 and
+            with
+            a
+            registered office at The Minster Building 7th Floor, 21 Mincing Lane, London EC3R 7AG). Meshada is also
+            referred
+            to
+            in this Cookie Policy as "we", "us", "our", and "ours".</p>
+          <p>This Cookie Policy applies to all of Meshada’s websites and mobile applications (the “Sites”) and any other
+            platforms Meshada owns or controls and makes available (the “Meshada Platforms”). We refer to the Sites and
+            the
+            Meshada
+            Platforms as the “Services”. This Cookie Policy also applies to any other linked pages or blogs, features,
+            content (including any information, text, graphics, photos, lists of items compiled by you, comments,
+            reviews,
+            links, or other materials uploaded, downloaded or appearing on, or linked to the Services), or applications
+            offered from time to time by Meshada in connection therewith (collectively the "Content").</p>
+          <p>Any changes to this policy will be posted here. We reserve the right to vary this Cookie Policy from time
+            to
+            time and such changes shall become effective as soon as they are posted.</p>
+          <h4>What are “Cookies”?</h4>
+          <p>A cookie is a small text file that is stored on your device when you visit certain websites. We use cookies
+            to
+            understand how you interact with our Services and distinguish you from other users of our Services. Among
+            other
+            benefits, this allows us to make improvements to the information and design of the Services and to provide
+            you
+            with better customer experience. The term “cookie” in this policy covers cookies and a range of other
+            similar
+            technologies, such as pixel tags.</p>
+          <p>It is easy to change your cookie settings. Please see ‘How do you opt-out of personalised advertising and
+            control other cookie settings?’ for further information on how to do this. However please be aware that if
+            you
+            delete, disable or opt-out of cookies, your online experience with the Services may be affected and some
+            features or areas of the Meshada Platforms and Services may be limited.</p>
+          <h4>What type of cookies do we use and why?</h4>
+          <p>We use the following categories of cookies on the Meshada Platforms:</p>
+          <p><em>Required cookies</em>. These cookies are necessary to allow us to operate the Services that you have
+            requested. For example, we use required cookies for site security and site integrity, account
+            authentication,
+            privacy preferences, maintenance data, to make the site work correctly for browsing and transactions, and
+            for
+            tracking user conversions on the Meshada Platforms. </p>
+          <p><em>Site Customization cookies</em>. These cookies are used to improve your experience of our Services and
+            operate according to your preferences. For example, they remember your login details and certain choices
+            that
+            you make on the Meshada Platform including content that you have viewed previously. Without these
+            technologies,
+            features like personalized recommendations or account preferences may not work correctly. </p>
+          <p><em>Analytical/performance cookies</em>. These cookies allow us to recognise and count the number of
+            visitors
+            and to see how visitors move around our Services when they are using them. This helps us to improve the way
+            our
+            Services work, for example, by ensuring that users are finding what they are looking for easily. These
+            cookies
+            collect anonymous information only and do not show personal details.</p>
+          <p><em>Personalised Advertising cookies</em>. These cookies are used to make our Services more relevant to you
+            and
+            to personalize advertising online that may be of interest to you. For example, they personalize features
+            such
+            as
+            (i) product searches and offers, (ii) recommended content, and (iii) adverts. They do not increase the
+            amount
+            of
+            content that you will be shown, but they will help limit the number of times you see the same content. To
+            opt-out of our use of these cookies, please refer to ‘How do you opt-out of personalized advertising and
+            control
+            other cookie settings?’ Note that opting out of this will not remove adverts, offers, or products; but may
+            make
+            them less relevant or more repetitive.</p>
+          <h4>What about third-party cookies?</h4>
+          <p>Third parties (for example, advertising networks and providers of external services like web traffic
+            analysis
+            services) may also store cookies on your device. These cookies are used by third parties to provide services
+            to
+            us, such as analytics/performance monitoring, or personalised advertising which may also include third
+            parties
+            using their cookies to show you adverts based on your past visits to the Sites. This means you may be shown
+            different products based on what you appear to be interested in and what you have viewed on the Sites as
+            well
+            as
+            other products deemed relevant to your browsing activity. In this way, advertising can be made as relevant
+            and
+            as useful to you as possible. </p>
+          <p>Note that we do not control cookies owned by third parties and it is your responsibility to configure your
+            preferences for third-party cookies based on your individual targeting and tracking preferences. </p>
+          <p>Below we have listed the third parties that place cookies on the Meshada Platforms, along with the purpose
+            for
+            which the cookies are used. For further information on these third-party cookies and how to opt-out, please
+            see
+            the third-party links provided. </p>
+          <table>
+            <thead>
+            <tr>
+              <th>Third party</th>
+              <th>Cookie use</th>
+              <th>Further information and opt-out details</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+              <td>Bing</td>
+              <td>Personalized advertising and analytics</td>
+              <td>Opt-out <a
+                href="https://account.microsoft.com/privacy/ad-settings/signedout?ru=https:%2F%2Faccount.microsoft.com%2Fprivacy%2Fad-settings">here</a>
+              </td>
+            </tr>
+            <tr>
+              <td>Criteo</td>
+              <td>Personalized advertising</td>
+              <td>Opt-out <a href="https://www.criteo.com/privacy/">here</a></td>
+            </tr>
+            <tr>
+              <td>Salesforce</td>
+              <td>Personalized advertising</td>
+              <td>Opt-out <a
+                href="https://www.salesforce.com/products/marketing-cloud/sfmc/audience-studio-consumer-choice/?mc=DMP">here</a>
+              </td>
+            </tr>
+            <tr>
+              <td>Adswizz</td>
+              <td>Personalized advertising</td>
+              <td>Opt-out <a href="https://www.adswizz.com/our-privacy-policy/">here</a></td>
+            </tr>
+            <tr>
+              <td>Facebook</td>
+              <td>Personalized advertising and analytics</td>
+              <td>Opt-out <a href="https://www.facebook.com/help/568137493302217">here</a></td>
+            </tr>
+            <tr>
+              <td>Pinterest</td>
+              <td>Personalized advertising</td>
+              <td>Opt-out <a href="https://help.pinterest.com/en-gb/article/personalization-and-data">here</a></td>
+            </tr>
+            <tr>
+              <td>Snapchat</td>
+              <td>Personalized advertising</td>
+              <td>Opt-out <a href="https://www.snapchat.com/l/en-gb/cookie-settings/">here</a></td>
+            </tr>
+            <tr>
+              <td>GetFeedback</td>
+              <td>Personalized advertising and analytics</td>
+              <td>Opt-out <a href="https://www.surveymonkey.com/mp/legal/cookies/">here</a></td>
+            </tr>
+            <tr>
+              <td>Branch</td>
+              <td>Personalized advertising</td>
+              <td>Opt-out <a href="https://branch.app.link/optout">here</a></td>
+            </tr>
+            <tr>
+              <td>Google Adwords</td>
+              <td>Personalized advertising and analytics</td>
+              <td>Opt-out <a href="https://adssettings.google.com/u/0/authenticated?hl=en">here</a></td>
+            </tr>
+            <tr>
+              <td>Google Doubleclick</td>
+              <td>Personalized advertising</td>
+              <td>Opt-out <a href="https://adssettings.google.com/u/0/authenticated?hl=en">here</a></td>
+            </tr>
+            <tr>
+              <td>Google Analytics</td>
+              <td>Analytics</td>
+              <td>Opt-out <a href="https://tools.google.com/dlpage/gaoptout">here</a></td>
+            </tr>
+            <tr>
+              <td>New Relic</td>
+              <td>Analytics</td>
+              <td>Opt-out <a href="https://newrelic.com/termsandconditions/cookie-policy">here</a></td>
+            </tr>
+            <tr>
+              <td>Rakuten</td>
+              <td>Analytics</td>
+              <td>Opt-out <a href="https://rakutenadvertising.com/en-uk/legal-notices/cookie-policy/">here</a></td>
+            </tr>
+            </tbody>
+          </table>
+          <p><br></p>
+          <h4>How do you opt-out of personalized advertising and control other cookie settings?</h4>
+          <p>Cookie settings on the Site. </p>
+          <p>All US users may opt in or out of the selling of their personal information according to the terms of CCPA
+            legislation using the checkbox featured in Meshada's <a href="/help/privacy-policy/">Privacy Policy</a>.
+          </p>
+          <p>Please bear in mind that opting out using the CCPA mechanism removes all non-essential cookies. Meshada
+            still
+            uses
+            essential first party cookies that will remain unless you also manually delete cookies on your device. </p>
+          <p>Browser settings:</p>
+          <ul>
+            <li>
+              <p>Block cookies: You can adjust your cookie preferences by activating the setting on your browser that
+                allows
+                you to refuse the setting of all or some cookies. The ""Help"" feature on most browsers will tell you
+                how
+                to
+                stop your browser from accepting new cookies. It should also tell you how to set up the browser to
+                notify
+                you when you receive a new cookie and how to disable cookies entirely. You can also disable or delete
+                similar data used by browser add-ons, such as flash cookies, by changing the add-ons settings or
+                visiting
+                the website of the browser manufacturer. Visit www.allaboutcookies.org for more information about how to
+                manage cookies on your particular browser.</p>
+            </li>
+            <li>
+              <p>Delete cookies: Your browser will also allow you to delete cookies that are currently set on your
+                device.
+                Please note that if you delete all of your cookies, all of your existing cookie preferences will also be
+                lost. This means that you will see the cookie banner again when you next visit our Site and you will
+                need
+                to
+                reset your cookie preferences. </p>
+            </li>
+          </ul>
+          <p>Device settings. You may also be able to adjust your cookie preferences in the settings of your device.
+            However, the settings you choose will not apply across your devices. This means that if you want to opt out
+            of
+            cookies on all devices, you must adjust your settings individually on each device and browser on which you
+            use
+            the Services. </p>
+          <p>Advertising Networks. You can opt-out of some third-party advertising cookies by visiting: The Digital
+            Advertising Alliance’s consumer choice page (http://optout.aboutads.info), the Network Advertising
+            Initiative’s
+            consumer choice page (http://optout.networkadvertising.org) or the European Interactive Digital Advertising
+            Alliance consumer choice page (http://youronlinechoices.eu). </p>
+          <p>Third parties. You can also adjust your third-party cookie preferences directly with the relevant third
+            party.
+            Please see ‘What about third party cookies?’ above for further details.</p>
+          <p>This Agreement has been drawn up in the English language. In case of discrepancies between the English text
+            version of this Agreement and any translation, the English version shall prevail.</p>
+          <p>Effective Date: 8 July 2021</p>
+        </div>
+<!--        <div *ngIf="contact" class="contact" fxLayout="row">-->
+<!--          <div class="offset3 span24 block menu-flatpage" fxFlex>-->
+<!--            <h2 class="mb15" id="contact-us">Contact us</h2>-->
+<!--            <p class="mb40">Our team is here to help with any inquiry you might have. To help us help you, please see-->
+<!--              below-->
+<!--              for the correct contact.</p>-->
+<!--            <section class="contact-section mb20">-->
+<!--              <h5>Are you a customer with a question about shopping on Meshada?</h5>-->
+<!--              <p>Visit our <a href="https://help.Meshada.com/hc/change_language/en-gb?return_to=/hc/en-gb"-->
+<!--                              target="_blank"-->
+<!--                              is="tracked-link" event-category="help center" event-action="clicked"-->
+<!--                              event-label="contact_us"-->
+<!--                              data-component-id="2">Help Center</a>, or contact Customer Care at-->
+<!--                customercare@Meshada.com.-->
+<!--              </p>-->
+<!--            </section>-->
+<!--            <section class="contact-section mb20">-->
+<!--              <h5>Are you a store, brand or designer interested in featuring on Meshada?</h5>-->
+<!--              <p>Apply <a href="/partners/" is="tracked-link" event-category="Meshada_connect"-->
+<!--                          event-action="partners_contact_link" data-component-id="1">here</a> to become a Meshada-->
+<!--                partner.-->
+<!--              </p>-->
+<!--            </section>-->
+<!--            <section class="contact-section mb20">-->
+<!--              <h5>Press inquiries</h5>-->
+<!--              <p>For any media inquiries, image requests or interview opportunities please contact <a-->
+<!--                href="mailto:press@Meshada.com">press@Meshada.com</a></p>-->
+<!--            </section>-->
+<!--            <section class="contact-section mb20">-->
+<!--              <h5>Registered Office</h5>-->
+<!--              <p>Meshada Limited</p>-->
+<!--              <p>Floor 7, The Minster Building</p>-->
+<!--              <p>21 Mincing Lane</p>-->
+<!--              <p>London</p>-->
+<!--              <p>EC3R 7AG</p>-->
+<!--            </section>-->
+<!--          </div>-->
+<!--          &lt;!&ndash;        <form [formGroup]="contactFormControl" (ngSubmit)="submitForm() " novalidate fxLayout="column" fxFlex&ndash;&gt;-->
+<!--          &lt;!&ndash;        >&ndash;&gt;-->
+
+<!--          &lt;!&ndash;          <h2>Send us a message</h2>&ndash;&gt;-->
+<!--          &lt;!&ndash;          <div style="background-color: white;padding: 10px;" fxLayout="column">&ndash;&gt;-->
+<!--          &lt;!&ndash;            <mat-form-field&ndash;&gt;-->
+<!--          &lt;!&ndash;              appearance="outline" color="warn"&ndash;&gt;-->
+<!--          &lt;!&ndash;              class="header-search-field"&ndash;&gt;-->
+<!--          &lt;!&ndash;            >&ndash;&gt;-->
+<!--          &lt;!&ndash;              &lt;!&ndash; <mat-label>Search</mat-label> &ndash;&gt;&ndash;&gt;-->
+<!--          &lt;!&ndash;              <input&ndash;&gt;-->
+<!--          &lt;!&ndash;                matInput style="margin-left: 10px"&ndash;&gt;-->
+<!--          &lt;!&ndash;                formControlName="searchfield"&ndash;&gt;-->
+<!--          &lt;!&ndash;                type="text"&ndash;&gt;-->
+<!--          &lt;!&ndash;                placeholder="your name or alias?"&ndash;&gt;-->
+<!--          &lt;!&ndash;                submit&ndash;&gt;-->
+<!--          &lt;!&ndash;              />&ndash;&gt;-->
+<!--          &lt;!&ndash;              &lt;!&ndash; <mat-hint>Search</mat-hint> &ndash;&gt;&ndash;&gt;-->
+<!--          &lt;!&ndash;              &lt;!&ndash;        <button matSuffix mat-icon-button aria-label="Clear" class="search" routerLink="/index"&ndash;&gt;&ndash;&gt;-->
+<!--          &lt;!&ndash;              &lt;!&ndash;                routerLinkActive="active">&ndash;&gt;&ndash;&gt;-->
+<!--          &lt;!&ndash;              &lt;!&ndash;          <mat-icon>search</mat-icon>&ndash;&gt;&ndash;&gt;-->
+<!--          &lt;!&ndash;              &lt;!&ndash;        </button>&ndash;&gt;&ndash;&gt;-->
+<!--          &lt;!&ndash;            </mat-form-field>&ndash;&gt;-->
+<!--          &lt;!&ndash;            <mat-form-field&ndash;&gt;-->
+<!--          &lt;!&ndash;              appearance="outline" color="warn"&ndash;&gt;-->
+<!--          &lt;!&ndash;              class="header-search-field"&ndash;&gt;-->
+<!--          &lt;!&ndash;            >&ndash;&gt;-->
+<!--          &lt;!&ndash;              <input&ndash;&gt;-->
+<!--          &lt;!&ndash;                matInput&ndash;&gt;-->
+<!--          &lt;!&ndash;                formControlName="searchfield"&ndash;&gt;-->
+<!--          &lt;!&ndash;                type="email"&ndash;&gt;-->
+<!--          &lt;!&ndash;                placeholder="Enter your email"&ndash;&gt;-->
+<!--          &lt;!&ndash;                submit&ndash;&gt;-->
+<!--          &lt;!&ndash;              />&ndash;&gt;-->
+<!--          &lt;!&ndash;              &lt;!&ndash; <mat-hint>Search</mat-hint> &ndash;&gt;&ndash;&gt;-->
+<!--          &lt;!&ndash;              &lt;!&ndash;        <button matSuffix mat-icon-button aria-label="Clear" class="search" routerLink="/index"&ndash;&gt;&ndash;&gt;-->
+<!--          &lt;!&ndash;              &lt;!&ndash;                routerLinkActive="active">&ndash;&gt;&ndash;&gt;-->
+<!--          &lt;!&ndash;              &lt;!&ndash;          <mat-icon>search</mat-icon>&ndash;&gt;&ndash;&gt;-->
+<!--          &lt;!&ndash;              &lt;!&ndash;        </button>&ndash;&gt;&ndash;&gt;-->
+<!--          &lt;!&ndash;            </mat-form-field>&ndash;&gt;-->
+
+<!--          &lt;!&ndash;            <mat-form-field&ndash;&gt;-->
+<!--          &lt;!&ndash;              appearance="outline" color="primary"&ndash;&gt;-->
+<!--          &lt;!&ndash;              class="header-search-field"&ndash;&gt;-->
+<!--          &lt;!&ndash;            >&ndash;&gt;-->
+<!--          &lt;!&ndash;              <textarea&ndash;&gt;-->
+<!--          &lt;!&ndash;                matInput rows="15"&ndash;&gt;-->
+<!--          &lt;!&ndash;                formControlName="searchfield"&ndash;&gt;-->
+<!--          &lt;!&ndash;                placeholder="Type here"&ndash;&gt;-->
+<!--          &lt;!&ndash;                submit fxFlex&ndash;&gt;-->
+<!--          &lt;!&ndash;              ></textarea>&ndash;&gt;-->
+<!--          &lt;!&ndash;            </mat-form-field>&ndash;&gt;-->
+<!--          &lt;!&ndash;            <div fxLayoutAlign="end end">&ndash;&gt;-->
+<!--          &lt;!&ndash;              <button mat-button> Send message</button>&ndash;&gt;-->
+<!--          &lt;!&ndash;            </div>&ndash;&gt;-->
+<!--          &lt;!&ndash;          </div>&ndash;&gt;-->
+<!--          &lt;!&ndash;        </form>&ndash;&gt;-->
+<!--        </div>-->
+
+      </div>
+      <div fxShow
+           fxHide.xs="true" fxFlex="20%"></div>
+    </div>
+  </div>
+  <footer style="background-color: rgba(238, 17, 17, 0.18)">
+    <!-- <h1>testing footer .com</h1> -->
+    <app-footer></app-footer>
+  </footer>
+</div>

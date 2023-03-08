@@ -1,0 +1,25 @@
+.container {
+  display: grid;
+  /* margin-left: 100px;
+  margin-right: 100px; */
+  grid-template-columns: 0.55fr .5fr 4fr 0.55fr;
+  grid-auto-flow: column;
+  gap: 30px;
+  background-color: rgba(225, 225, 225, 0.10);
+}
+
+
+.content {
+  /* overflow: auto; */
+  grid-column: 3/4;
+  /* flex-grow: 1; */
+  /* flex-shrink: 3; */
+}
+
+.filter {
+  /* overflow: auto; */
+  /* width: 250px; */
+
+  grid-column: 2/3;
+  /* margin: 10px; */
+}

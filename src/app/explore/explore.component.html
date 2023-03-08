@@ -1,0 +1,172 @@
+<div
+  infiniteScroll
+  [infiniteScrollDistance]="2"
+  [scrollWindow]="false"
+  [infiniteScrollThrottle]="50"
+  (scrolled)="onScroll()"
+  style="height: 100%; overflow-y: scroll; position: relative"
+>
+  <div fxLayout="row" style="margin-top: 20px; margin-bottom: 20px">
+    <div fxShow fxHide.xs="true" fxFlex="20%"></div>
+    <!--  <div  fxLayout="row wrap" style="background-color: cornflowerblue">-->
+
+    <!--      <mat-card  *ngFor="let item of items" style="padding: 0">-->
+
+    <div
+      fxLayout="row wrap"
+      fxLayoutGap="10px grid"
+      style="margin-top: -2px; border-radius: 20px"
+      mat-card-image
+      fxLayoutAlign="center center"
+      fxShow
+      fxHide.xs="true"
+    >
+      <div
+        *ngFor="let item of items"
+        [fxFlex]="100 / 3 + '%'"
+        [fxFlex.xs]="50 + '%'"
+        [fxFlex.md]="33 + '%'"
+      >
+        <div style="position: relative">
+          <button
+            mat-icon-button
+            style="
+              position: absolute;
+              color: rgba(63, 63, 63, 0.56);
+              top: 10px;
+              right: 10px;
+            "
+            matTooltip="add to wishlist"
+          >
+            <mat-icon> favorite</mat-icon>
+          </button>
+          <button
+            mat-icon-button
+            style="
+              position: absolute;
+              color: rgba(63, 63, 63, 0.56);
+              top: 40px;
+              right: 10px;
+            "
+            matTooltip="add to wishlist"
+          >
+            <mat-icon> add</mat-icon>
+          </button>
+
+          <button
+            mat-icon-button
+            style="
+              position: absolute;
+              color: rgba(63, 63, 63, 0.56);
+              top: 70px;
+              right: 10px;
+            "
+            matTooltip="add to wishlist"
+          >
+            <mat-icon> share</mat-icon>
+          </button>
+
+          <img
+            width="400"
+            height="500"
+            data-src="{{
+              'https://cdn.meshada.com/sig/' + item.image_urls[0] + '.webp'
+            }}"
+            onerror="this.src='assets/placeholder.png'"
+            alt="{{ item.product_name }}"
+            style="
+              max-height: 100%;
+              max-width: 100%;
+              object-fit: cover;
+              border-radius: 20px;
+            "
+          />
+        </div>
+      </div>
+    </div>
+    <div
+      fxLayout="row wrap"
+      fxLayoutGap="5px grid"
+      style="
+        padding: 3px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+        min-width: 100%;
+        min-height: 100%;
+        position: relative;
+      "
+      fxLayoutAlign="center center"
+      fxHide
+      fxHide.xs="false"
+    >
+      <div
+        *ngFor="let item of items"
+        [fxFlex]="100 / 3 + '%'"
+        [fxFlex.xs]="50 + '%'"
+        [fxFlex.md]="33 + '%'"
+      >
+        <div style="position: relative">
+          <button
+            mat-icon-button
+            style="
+              position: absolute;
+              color: rgba(63, 63, 63, 0.56);
+              bottom: 10px;
+              right: 10px;
+            "
+            matTooltip="add to wishlist"
+          >
+            <mat-icon> favorite</mat-icon>
+          </button>
+          <button
+            mat-icon-button
+            style="
+              position: absolute;
+              color: rgba(63, 63, 63, 0.56);
+              bottom: 10px;
+              right: 40px;
+            "
+            matTooltip="add to wishlist"
+          >
+            <mat-icon> add</mat-icon>
+          </button>
+
+          <button
+            mat-icon-button
+            style="
+              position: absolute;
+              color: rgba(63, 63, 63, 0.56);
+              bottom: 10px;
+              right: 70px;
+            "
+            matTooltip="add to wishlist"
+          >
+            <mat-icon> share</mat-icon>
+          </button>
+          <img
+            width="400"
+            height="500"
+            data-src="{{
+              'https://cdn.meshada.com/sig/' + item.image_urls[0] + '.webp'
+            }}"
+            onerror="this.src='assets/placeholder.png'"
+            alt="{{ item.product_name }}"
+            style="
+              max-height: 100%;
+              max-width: 100%;
+              object-fit: cover;
+              border-radius: 10px;
+            "
+          />
+        </div>
+      </div>
+    </div>
+    <!--      </mat-card>-->
+
+    <!--  </div>-->
+    <div fxShow fxHide.xs="true" fxFlex="20%"></div>
+  </div>
+  <!--  -->
+</div>

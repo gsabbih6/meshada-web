@@ -1,0 +1,11 @@
+::-webkit-scrollbar {
+  width: 0;  /* Remove scrollbar space */
+  background: transparent;  /* Optional: just make scrollbar invisible */
+}
+a {
+  /*font-size: large;*/
+  text-decoration: none;
+  color: black;
+  /*margin: 2px;*/
+  cursor: pointer;
+}

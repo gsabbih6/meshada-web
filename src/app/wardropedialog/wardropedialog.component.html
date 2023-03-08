@@ -1,0 +1,57 @@
+<div fxLayout="column">
+  <div class="mat-elevation-z1" fxFlex="10%" fxFlexAlign="center start" style="position: sticky;
+       top: 0; height: 100%;
+       left: 0; padding: 10px;
+       background-color: white;
+       z-index: 2;">
+    <p fxFlex>Add to Wardrobe ...</p>
+    <button mat-dialog-close mat-icon-button>
+      <mat-icon>close</mat-icon>
+    </button>
+  </div>
+  <!--  <mat-divider style="margin-bottom: 10px;margin-top: 10px"></mat-divider>-->
+  <div fxFlex fxFill>
+    <div fxLayout="row" *ngFor="let ward of wardrobes"
+         style="margin-bottom: 10px;margin-top: 10px;padding-left: 10px;padding-right: 10px">
+      <mat-checkbox [checked]="isChecked(ward)" (change)="addItem($event,ward.wardrobe)" fxFlex>{{ward.wardrobe.name}}</mat-checkbox>
+      <mat-icon>lock_outline</mat-icon>
+    </div>
+
+  </div>
+
+  <div fxFlex="10%" style="
+  position: -webkit-sticky;
+  position: sticky;
+       bottom: 0;
+       padding: 10px;
+       background-color: white;
+       z-index: 2;">
+    <form [formGroup]="wardForm">
+      <mat-expansion-panel style="border: 0!important;">
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            Add a new Wardrobe section
+          </mat-panel-title>
+          <mat-panel-description>
+            Sections are a great way to organise items you care about
+          </mat-panel-description>
+        </mat-expansion-panel-header>
+        <div fxLayout="column wrap">
+          <mat-form-field class="example-full-width" appearance="fill" fxFlex>
+            <mat-label>Section name</mat-label>
+            <input matInput required placeholder="add new section name" value="" formControlName="name">
+          </mat-form-field>
+          <mat-form-field appearance="fill" fxFlex>
+            <mat-label>Visibility</mat-label>
+            <select matNativeControl required formControlName="visibility">
+              <option value="private">Private</option>
+              <!--          <option value="saab">Saab</option>-->
+            </select>
+          </mat-form-field>
+        </div>
+        <button mat-button fxFlexAlign="end end" color="warn" (click)="addwardrobe()">Create</button>
+        <p *ngIf="error" style="font-size: x-small;color: indianred">Complete all fields</p>
+      </mat-expansion-panel>
+    </form>
+  </div>
+</div>

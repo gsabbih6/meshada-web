@@ -1,0 +1,271 @@
+<div class="container">
+  <div style="margin-bottom: 10px; grid-row: 1">
+    <label style="font-size: x-large">Filters</label>
+  </div>
+  <!--  <div fxFlex fxLayout="row" class="example-action-buttons" style="margin-bottom: 10px">-->
+  <!--    <span fxFlex mat-button></span>-->
+  <!--    <button fxFlex mat-button>Collapse All</button>-->
+  <!--  </div>-->
+  <!--  <form [formGroup]="priceFormGroup">-->
+  <div>
+    <mat-accordion class="example-headers-align" multi>
+      <mat-expansion-panel expanded="true">
+        <mat-expansion-panel-header>
+          <mat-panel-title style="font-size: large; color: black">
+            Gender
+          </mat-panel-title>
+          <mat-panel-description> </mat-panel-description>
+        </mat-expansion-panel-header>
+        <mat-radio-group
+          [(ngModel)]="gender"
+          (change)="onGenderSelected()"
+          fxLayout="column"
+        >
+          <mat-radio-button
+            value="1"
+            class="example-radio-button"
+            checked="true"
+          >
+            All
+          </mat-radio-button>
+          <mat-radio-button value="2" class="example-radio-button">
+            Men
+          </mat-radio-button>
+          <mat-radio-button value="3" class="example-radio-button">
+            Women
+          </mat-radio-button>
+        </mat-radio-group>
+      </mat-expansion-panel>
+      <mat-expansion-panel expanded="true">
+        <mat-expansion-panel-header>
+          <mat-panel-title style="font-size: large; color: black">
+            Category
+          </mat-panel-title>
+          <!--      <mat-panel-description>-->
+          <!--         Type your name and age-->
+          <!--         <mat-icon>checkroom</mat-icon>-->
+          <!--      </mat-panel-description>-->
+        </mat-expansion-panel-header>
+        <cdk-virtual-scroll-viewport
+          itemSize="10"
+          style="height: 40vh; overflow-y: scroll"
+        >
+          <mat-tree
+            [dataSource]="dataSource"
+            [treeControl]="treeControl"
+            class="example-tree"
+          >
+            <!-- This is the tree node template for leaf nodes -->
+            <!-- There is inline padding applied to this node using styles.
+          This padding value depends on the mat-icon-button width. -->
+            <mat-tree-node *matTreeNodeDef="let node" matTreeNodeToggle>
+              <mat-checkbox
+                class="checklist-leaf-node"
+                [checked]="itemSelection.isSelected(node)"
+                [indeterminate]="descendantsPartiallySelectedAndNotAll(node)"
+                (change)="itemSelectionToggle(node)"
+                ><span>{{ node.name }}</span>
+                <span
+                  style="
+                    font-size: smaller;
+                    font-style: italic;
+                    color: indianred;
+                  "
+                >
+                  ({{ node.count }})
+                </span></mat-checkbox
+              >
+            </mat-tree-node>
+            <!-- This is the tree node template for expandable nodes -->
+            <mat-nested-tree-node *matTreeNodeDef="let node; when: hasChild">
+              <div class="mat-tree-node" fxFlexLayout="row">
+                <mat-checkbox
+                  fxLayout="row"
+                  class="checklist-leaf-node"
+                  [checked]="itemSelection.isSelected(node)"
+                  [indeterminate]="descendantsPartiallySelectedAndNotAll(node)"
+                  (change)="itemSelectionToggle(node)"
+                >
+                </mat-checkbox>
+                <span fxFlex
+                  >{{ node.name }}
+                  <span
+                    style="
+                      font-size: smaller;
+                      font-style: italic;
+                      color: indianred;
+                    "
+                  >
+                    ({{ node.count }})
+                  </span></span
+                >
+                <button
+                  mat-icon-button
+                  matTreeNodeToggle
+                  [attr.aria-label]="'Toggle ' + node.name"
+                >
+                  <mat-icon class="mat-icon-rtl-mirror">
+                    {{
+                      treeControl.isExpanded(node)
+                        ? "expand_more"
+                        : "chevron_right"
+                    }}
+                  </mat-icon>
+                </button>
+                <!--        &lt;!&ndash;                    <button mat-icon-button (click)="addNewItem(node)"><mat-icon>add</mat-icon></button>&ndash;&gt;-->
+                <!--        {{node.name}}-->
+              </div>
+
+              <!-- There is inline padding applied to this div using styles.
+              This padding value depends on the mat-icon-button width.  -->
+              <div
+                [class.example-tree-invisible]="!treeControl.isExpanded(node)"
+                role="group"
+              >
+                <ng-container matTreeNodeOutlet></ng-container>
+              </div>
+            </mat-nested-tree-node> </mat-tree
+        ></cdk-virtual-scroll-viewport>
+      </mat-expansion-panel>
+      <mat-expansion-panel expanded="true" fxLayout="column">
+        <mat-expansion-panel-header>
+          <mat-panel-title style="font-size: large; color: black">
+            Price $
+          </mat-panel-title>
+          <!--      <mat-panel-description>-->
+          <!--&lt;!&ndash;         <mat-icon>storefront</mat-icon>&ndash;&gt;-->
+          <!--      </mat-panel-description>-->
+        </mat-expansion-panel-header>
+
+        <section fxLayout="column" class="example-section">
+          <!-- <mat-radio-group (change)="onGenderSelected()">
+            <div *ngFor="let item of facet.price[0].data; let i = index">
+              <mat-radio-button
+                value="{{ i }}"
+                (change)="onPriceChaged(item.value)"
+                >{{ item.value }}</mat-radio-button
+              >
+            </div>
+          </mat-radio-group> -->
+
+          <div fxLayout="row">
+            <mat-form-field
+              fxFlex="50%"
+              appearance="outline"
+              style="margin-right: 5px"
+            >
+              <mat-label>Minimum Price</mat-label>
+              <mat-select
+                [(value)]="minPrice"
+                (selectionChange)="onPriceChagedCustom()"
+              >
+                <mat-option *ngFor="let price of prices" [value]="price">
+                  {{ price | currency : "USD" }}
+                </mat-option>
+              </mat-select>
+            </mat-form-field>
+            <span> </span>
+            <mat-form-field
+              fxFlex="50%"
+              appearance="outline"
+              style="margin-left: 5px"
+            >
+              <mat-label>Maximum Price</mat-label>
+              <mat-select
+                [(value)]="maxPrice"
+                (selectionChange)="onPriceChagedCustom()"
+              >
+                <mat-option *ngFor="let price of prices" [value]="price">
+                  {{ price | currency : "USD"
+                  }}<span *ngIf="price == '1000'">+</span>
+                </mat-option>
+              </mat-select>
+            </mat-form-field>
+          </div>
+          <span *ngIf="checkedPrice < 0"
+            >Minimum price must be less than maximum price</span
+          >
+        </section>
+      </mat-expansion-panel>
+      <!--    <mat-expansion-panel expanded="false">-->
+      <!--      <mat-expansion-panel-header>-->
+      <!--        <mat-panel-title style="font-size: large; color: black">-->
+      <!--          Sale</mat-panel-title-->
+      <!--        >-->
+      <!--        <mat-panel-description>-->
+      <!--          &lt;!&ndash; Type your name and age &ndash;&gt;-->
+      <!--          &lt;!&ndash; <mat-icon>account_circle</mat-icon> &ndash;&gt;-->
+      <!--        </mat-panel-description>-->
+      <!--      </mat-expansion-panel-header>-->
+      <!--      <mat-radio-group-->
+      <!--        [(ngModel)]="sale"-->
+      <!--        (change)="onSaleSelected()"-->
+      <!--        fxLayout="column"-->
+      <!--        fxLayoutGap="5px"-->
+      <!--      >-->
+      <!--        <mat-radio-button-->
+      <!--          value="1"-->
+      <!--          fxFlex-->
+      <!--          class="example-radio-button"-->
+      <!--          checked="true"-->
+      <!--        >-->
+      <!--          On Sale-->
+      <!--        </mat-radio-button>-->
+      <!--        <mat-radio-button value="2" fxFlex class="example-radio-button">-->
+      <!--          Cashback-->
+      <!--        </mat-radio-button>-->
+      <!--&lt;!&ndash;        <mat-radio-button value="3" fxFlex class="example-radio-button">&ndash;&gt;-->
+      <!--&lt;!&ndash;          5%+ Cashback&ndash;&gt;-->
+      <!--&lt;!&ndash;        </mat-radio-button>&ndash;&gt;-->
+      <!--      </mat-radio-group>-->
+      <!--    </mat-expansion-panel>-->
+      <!-- <mat-expansion-panel expanded="true" fxLayout="column">
+      <mat-expansion-panel-header>
+        <mat-panel-title style="font-size: large; color: black">
+          Brands
+        </mat-panel-title>
+        <mat-panel-description>
+          <mat-icon>storefront</mat-icon>
+        </mat-panel-description>
+      </mat-expansion-panel-header>
+
+      <section class="example-section">
+        <h4>Select stores</h4>
+        <cdk-virtual-scroll-viewport itemSize="10" style="height: 20vh">
+          <p *ngFor="let brand of facet['brand_name.keyword'][0].data">
+            <mat-checkbox
+              MatCheckb
+              (change)="onBrandItemSelected($event, brand)"
+              >{{ brand.value }}</mat-checkbox
+            >
+          </p>
+        </cdk-virtual-scroll-viewport>
+      </section>
+    </mat-expansion-panel> -->
+      <mat-expansion-panel expanded="true" fxLayout="column">
+        <mat-expansion-panel-header>
+          <mat-panel-title style="font-size: large; color: black">
+            Store
+          </mat-panel-title>
+          <!--      <mat-panel-description>-->
+          <!--&lt;!&ndash;         <mat-icon>storefront</mat-icon>&ndash;&gt;-->
+          <!--      </mat-panel-description>-->
+        </mat-expansion-panel-header>
+
+        <section class="example-section">
+          <h4>Select stores</h4>
+          <cdk-virtual-scroll-viewport itemSize="10" style="height: 30vh">
+            <p *ngFor="let store of facet['store_name.keyword'][0].data">
+              <mat-checkbox
+                (change)="onStoreItemSelected($event, store)"
+                [checked]="storeSelected.includes(store.value)"
+                >{{ store.value }}</mat-checkbox
+              >
+            </p>
+          </cdk-virtual-scroll-viewport>
+        </section>
+      </mat-expansion-panel>
+    </mat-accordion>
+  </div>
+  <!--  </form>-->
+</div>

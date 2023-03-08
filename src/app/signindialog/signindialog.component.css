@@ -1,0 +1,17 @@
+.googlebutton mat-icon {
+  height: 48px !important;
+  width: 48px !important;
+  font-size: 48px !important;
+  margin-bottom: 3px !important;
+}
+
+.googlebutton {
+  margin-bottom: 10px !important;
+  padding: 10px !important;
+  /*margin-left: 10px;*/
+}
+a {
+  text-decoration:underline;
+  color: black;
+  margin: 2px; cursor: pointer;
+}

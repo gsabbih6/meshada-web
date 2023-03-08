@@ -1,0 +1,161 @@
+<div #target style="background-color: cornflowerblu0e"></div>
+<div class="container">
+  <!-- <div
+    #tabsContentRef
+    *ngIf="totalResults != 0"
+    fxLayout="column"
+    style="
+      margin-bottom: 10px;
+      margin-left: 2px;
+      margin-bottom: 4px;
+      margin-right: 2px;
+    "
+  > -->
+  <!-- <form
+    fxHide
+    fxShow.xs
+    style="margin-left: 20px; margin-right: 20px"
+    fxFlex
+    novalidate
+    [formGroup]="searchForm"
+    (ngSubmit)="submitForm()"
+  > -->
+  <!-- <mat-form-field
+      fxFlex
+      appearance="outline"
+      color="warn"
+      style="
+        border: 20px !important;
+        padding-top: 18px;
+        font-size: small;
+        border-radius: 20px;
+      "
+      class="header-search-field"
+    > -->
+  <!-- <mat-label>Search</mat-label> -->
+  <!-- <input
+        matInput
+        formControlName="searchfield"
+        type="search"
+        placeholder="What are you looking for?"
+        submit
+      /> -->
+  <!-- <mat-hint>Search</mat-hint> -->
+  <!-- <button
+        matSuffix
+        mat-icon-button
+        aria-label="Clear"
+        class="search"
+        routerLink="/store"
+        routerLinkActive="active"
+      > -->
+  <!-- <mat-icon>search</mat-icon> -->
+  <!-- </button> -->
+  <!-- </mat-form-field> -->
+  <!-- </form> -->
+  <div class="header">
+    <div style="margin-top: 50px; margin-left: 20px" class="info">
+      {{ totalResults }}
+      <span style="font-style: italic">products,</span>
+      <!-- {{ this.facet["store_name.keyword"][0].data.length }} -->
+      {{ storeCount }}
+      stores
+    </div>
+
+    <div
+      style="margin-top: 20px; margin-right: 20px; color: white"
+      class="sort"
+    >
+      <mat-form-field appearance="outline">
+        <mat-label style="font-size: large">Sort by</mat-label>
+        <mat-select
+          [(value)]="selectedValue"
+          name="sorts"
+          (selectionChange)="sorting()"
+        >
+          <!--        <mat-option></mat-option>-->
+          <mat-option *ngFor="let sort of sorts" [value]="sort">
+            {{ sort }}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+  </div>
+
+  <div class="gallery">
+    <div
+      *ngFor="
+        let item of productItem
+          | paginate
+            : {
+                itemsPerPage: 20,
+                currentPage: p,
+                totalItems: totalResults
+              };
+        let i = index
+      "
+    >
+      <!-- <div> -->
+      <app-product-card
+        [product]="item"
+        [user]="user"
+        (signUser)="openSigninDialog($event)"
+        (addProducttoWardrop)="onAddtoWardrobeClicked($event)"
+      ></app-product-card>
+      <!-- <p>{{ item.available.raw }}</p> -->
+      <!-- </div> -->
+      <!-- <mat-divider></mat-divider> -->
+    </div>
+  </div>
+  <!--  <pagination-controls  style="margin: 20px" (pageChange)="onPaginationClicke($event)" fxLayoutAlign="center center"></pagination-controls>-->
+  <div *ngIf="totalResults > 0" class="pagination">
+    <pagination-template
+      #pp="paginationApi"
+      (pageChange)="onPaginationClicke($event, target)"
+    >
+      <div class="custom-pagination">
+        <div class="pagination-previous" [class.disabled]="pp.isFirstPage()">
+          <!--        <span *ngIf="!pp.isFirstPage()" (click)="pp.previous()">-->
+          <button
+            mat-icon-button
+            *ngIf="!pp.isFirstPage()"
+            (click)="pp.previous()"
+          >
+            <mat-icon color="warn">arrow_back_ios_new</mat-icon>
+            <!-- < -->
+          </button>
+          <!--            </span>-->
+        </div>
+
+        <!-- <div fxHide fxHide.xs="false" class="page-number">
+          <span>see more</span>
+        </div> -->
+        <div
+          class="page-number"
+          async
+          *ngFor="let page of pp.pages | slice : 0 : pp.pages.length - 1"
+          [class.current]="pp.getCurrent() === page.value"
+        >
+          <p
+            (click)="pp.setCurrent(page.value)"
+            *ngIf="pp.getCurrent() !== page.value"
+          >
+            {{ page.label }}
+          </p>
+          <div *ngIf="pp.getCurrent() === page.value">
+            <p>{{ page.label }}</p>
+          </div>
+        </div>
+        <div class="pagination-next" [class.disabled]="pp.isLastPage()">
+          <!--        <span *ngIf="!pp.isLastPage()" (click)="pp.next()"> > </span>-->
+
+          <button mat-icon-button *ngIf="!pp.isLastPage()" (click)="pp.next()">
+            <mat-icon color="#a8bbbf">arrow_forward_ios</mat-icon>
+            <!-- > -->
+          </button>
+        </div>
+      </div>
+    </pagination-template>
+  </div>
+  <!-- </div> -->
+</div>

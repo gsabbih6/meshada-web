@@ -1,0 +1,23 @@
+.scrolling-wrapper {
+  /*overflow-x: scroll;scroll*/
+  /*overflow-y: hidden;*/
+  /*white-space: nowrap;*/
+  cursor: grab
+}
+
+.card {
+  display: inline-block;
+  margin: 5px;
+  cursor: grab
+}
+
+img {
+  width: 400px;
+  height: 400px;
+  object-fit: cover;
+}
+
+/*::-webkit-scrollbar {*/
+/*  width: 0;  !* Remove scrollbar space *!*/
+/*  background: transparent;  !* Optional: just make scrollbar invisible *!*/
+/*}*/

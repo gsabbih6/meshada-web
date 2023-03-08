@@ -1,0 +1,42 @@
+<div fxLayout="column">
+  <p>
+    Get cashback for every item you purchase through Meshada. All you need is to register an account with us and shop
+    using our links
+  </p>
+  <p>
+    Your cash backs will be collected from the store and credited to your account for withdrawal after you complete a
+    purchase.
+  </p>
+
+  <div *ngIf='user.stripeId!=""' fxLayout="column">
+    <p>
+      Subscribe below and start shopping with cashback.
+    </p>
+    <button mat-button color="warn" (click)="onSubscribeClicked()" fxFlex>Subscribe here
+      <mat-icon>notifications</mat-icon>
+    </button>
+  </div>
+  <div *ngIf='user.stripeId==""' fxLayout="column">
+    <p>
+      Connect your account to STRIPE and start getting paid.
+    </p>
+    <!--    <a  href="{{onStripeClicked()}}">-->
+    <button mat-button (click)="onStripeClicked()" style="background-color: #625ae3;color: white;text-decoration: none"
+            fxFlex>Connect to
+      Stripe
+    </button>
+    <!--    </a>-->
+  </div>
+</div>
+<!--<div *ngIf="purchase" fxLayout="column">-->
+<!--  <p>-->
+<!--    Save the code below to redeem <span style="color: #e75757">1%</span> after you make the purchase.-->
+<!--  </p>-->
+<!--  <p fxLayoutAlign="center center"-->
+<!--     style="background-color: rgba(169,169,169,0.26);padding: 15px;font-size: small;border-radius: 10px">-->
+<!--    <code>{{code}}</code>-->
+<!--  </p>-->
+<!--  <button [cdkCopyToClipboard]="code" color="warn"-->
+<!--          mat-button (click)="goToLink()">{{copy}}-->
+<!--  </button>-->
+<!--</div>-->

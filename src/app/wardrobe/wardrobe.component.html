@@ -1,0 +1,146 @@
+<div fxLayout="row">
+  <div fxShow fxHide.xs fxFlex="20%"></div>
+  <div style=" overflow:hidden;overflow-x: hidden;height: 100% ;margin: 10px" fxLayout="column">
+    <h1>
+      <span style="font-size: x-large">Your Wardrobe Collections</span>
+    </h1>
+    <div fxLayout="column" fxLayoutAlign="center center" *ngIf="wardrobes.length==0"
+         style="background-color: indianred;border-radius:10px">
+      <p fxFlex style="font-size:medium;color: white;font-size: large; text-align: center">
+        You don't have any items in your wardrobe.
+      </p>
+    </div>
+    <p style="font-size:medium">
+      Organise your favorite items in your wardrobe from across multiple stores in one place. You can buy when your are
+      ready
+      or share with friends for their opinion.
+    </p>
+    <div fxFlex *ngIf="wardrobes.length==0" fxLayoutAlign="center center">
+
+      <button
+        routerLink="/store" routerLinkActive="active"
+        mat-stroked-button style="border-color: indianred !important;  font-family: 'Roboto Mono', monospace; "
+        mat-raised-button>
+        Find something you may like
+      </button>
+    </div>
+    <div fxLayout="column">
+
+      <div *ngFor="let wardrobe of wardrobes;let i = index" fxFlex fxLayout="column"
+           style=" ">
+
+        <!--      <div fxLayout="column" style="">-->
+        <div style=" margin: 10px" fxLayout="row"
+             *ngIf="wardrobe.productList.length!=0">
+        <span
+          style="margin:10px;font-size: 1.6rem;line-height: 2.2rem;font-weight: 700;max-height: 2.2rem;overflow: hidden;display: block;">
+          {{wardrobe.wardrobe.name | titlecase}}
+          <span style="margin:10px;font-size: 1.6rem;font-weight: 100">{{getProductCount(wardrobe.wardrobe)}}</span>
+        </span>
+
+        </div>
+        <div fxLayout="row wrap" fxLayoutGap="1px grid" fxFlex #maindiv
+        >
+
+          <div
+            [fxFlex]="100 / 4 + '%'"
+            [fxFlex.xs]="50+ '%'"
+            [fxFlex.md]="33+ '%'"
+            *ngFor="let item of wardrobe.productList ;"
+          >
+            <mat-card
+              #card1
+              fxFlex
+              fxLayout="column"
+              style="border-radius: 0px !important;"
+            >
+              <!--        <div fxLayout="row"-->
+              <!--             style="z-index: 3; position: absolute;">-->
+              <!--          <button-->
+              <!--            fxFlex (click)="removeItemforList(i)"-->
+              <!--            style="cursor: pointer;background-color: rgb(255,255,255);-->
+              <!--            border-width:3px !important;border-color: rgba(220,20,60,0) !important; border-radius: 50px"-->
+              <!--            color="warn" mat-stroked&#45;&#45;button>-->
+              <!--            <mat-icon>close_outlined</mat-icon>-->
+              <!--          </button>-->
+              <!--        </div>-->
+              <!--              <div mat-card-image fxLayoutAlign="center center">-->
+              <!--                <ik-image-->
+
+              <!--                  [src]="item.image_urls[0]"-->
+              <!--                  [transformation]="transform"-->
+              <!--                >-->
+              <!--                </ik-image>-->
+              <!--              </div>-->
+              <!--              <div *ngIf="checkImageError(item.image_urls[0])" fxShow fxHide.xs="true" fxFlex mat-card-image fxLayoutAlign="center center" style="">-->
+              <!--                <ik-image-->
+
+              <!--                  [src]="item.image_urls[0]"-->
+              <!--                  [transformation]="transform"-->
+              <!--                >-->
+              <!--                </ik-image>-->
+              <!--              </div>-->
+              <!--              <div *ngIf="checkImageError(item.image_urls[0])" fxHide fxHide.xs="false" fxFlex mat-card-image fxLayoutAlign="center center" style="padding-top: 0px">-->
+              <!--                <ik-image-->
+
+              <!--                  [src]="item.image_urls[0]"-->
+              <!--                  [transformation]="transformxs"-->
+              <!--                >-->
+              <!--                </ik-image>-->
+              <!--              </div>-->
+<!--              <img mat-card-image src="{{item.image_urls[0]}}"-->
+<!--                   onerror="this.src='assets/placeholder.png'" alt="alternative">-->
+              <div
+                style="margin-top: -2px"
+                mat-card-image
+                fxLayoutAlign="center center"
+                fxShow
+                fxHide.xs="true"
+              >
+                <img
+                  width="200"
+                  height="250"
+                  data-src="{{ item.image_urls[0] }}"
+                  onerror="this.src='assets/placeholder.png'"
+                  alt="{{ item.product_name }}"
+                  style="height: 250px; width: 200px; object-fit: cover"
+                />
+              </div>
+              <div
+                style="margin-top: -2px"
+                mat-card-image
+                fxLayoutAlign="center center"
+                fxHide
+                fxHide.xs="false"
+              >
+                <img
+                  width="150"
+                  height="200"
+                  data-src="{{ item.image_urls[0] }}"
+                  onerror="this.src='assets/placeholder.png'"
+                  alt="{{ item.product_name }}"
+                  style="height: 200px; width: 150px; object-fit: cover"
+                />
+              </div>
+              <mat-card-actions fxLayoutAlign="end">
+
+                <a target="_blank" [routerLink]="['/action',item.id+'&'+user.id]" routerLinkActive="active"
+                   rel="noopener">
+                  <button mat-button color="warn">Buy now</button>
+                </a>
+                <button mat-icon-button color="warn">
+                  <mat-icon>share_outlined</mat-icon>
+                </button>
+              </mat-card-actions>
+            </mat-card>
+          </div>
+        </div>
+        <!--      <mat-divider style="margin: 30px 0px 30px 0px" *ngIf="wardrobe.productList.length!=0"></mat-divider>-->
+        <!--      </div>-->
+      </div>
+
+    </div>
+    <!--<div fxFlex="30%"></div>-->
+  </div>
+  <div fxShow fxHide.xs fxFlex="20%"></div>
+</div>

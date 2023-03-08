@@ -1,0 +1,18 @@
+.square {
+  position: relative;
+  width: 200px;
+  height: 250px;
+  overflow: hidden;
+}
+img {
+  position: absolute;
+  /*object-fit: cover;*/
+  /*max-width: 100%;*/
+  /*width: 100%;*/
+  /*height: auto;*/
+  /*top: 50%;*/
+  /*left: 50%;*/
+  /*transform: translate(-50%, -50%);*/
+  width: 200px;
+  height: 250px;
+}
